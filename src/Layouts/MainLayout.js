@@ -25,7 +25,7 @@ const MainLayout = props => {
                     flex flex-row justify-center items-center
                     bg-light shadow-light-outer hover:shadow-light-inner
                     dark:text-gray-100 dark:shadow-dark-outer dark:hover:shadow-dark-inner dark:bg-dark
-                    text-2xl w-14 h-14 rounded-2xl
+                    text-2xl w-14 h-14 rounded-2xl text-gray-700
                     transition duration-300
                     '
                 >
@@ -41,7 +41,7 @@ const MainLayout = props => {
                     flex flex-row justify-center items-center
                     bg-light shadow-light-outer hover:shadow-light-inner
                     dark:text-gray-100 dark:shadow-dark-outer dark:hover:shadow-dark-inner dark:bg-dark
-                    text-2xl w-14 h-14 rounded-2xl
+                    text-2xl w-14 h-14 rounded-2xl text-gray-700
                     transition duration-300
                     '
                 >
