@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: "font-fa";
+    src: local("IRANYekanWebMedium"),
+    url('assets/fonts/IRANYekanWebMedium.woff') format("woff");
+    font-weight: 100;
+}
+
+
+
+* {
+    font-family: font-fa;
+}
