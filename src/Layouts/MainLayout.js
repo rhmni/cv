@@ -1,6 +1,8 @@
 import React, {useContext, useEffect} from 'react';
 import {ThemeContext} from "../Context/themeContext";
 import {RiMoonFill, RiSunFill} from "react-icons/ri";
+import {MdLanguage} from "react-icons/md";
+import Header from "../Blocks/Header";
 
 
 const MainLayout = props => {
@@ -29,12 +31,7 @@ const MainLayout = props => {
                     transition duration-300
                     '
                 >
-                    <p>
-                        {
-                            themeContext.theme.theme === 'light' ?
-                                <RiMoonFill/> : <RiSunFill/>
-                        }
-                    </p>
+                        {themeContext.theme.theme === 'light' ? <RiMoonFill/> : <RiSunFill/>}
                 </button>
                 <button
                     className='
@@ -45,17 +42,29 @@ const MainLayout = props => {
                     transition duration-300
                     '
                 >
-                    <p>
-                        {
-                            themeContext.theme.theme === 'light' ?
-                                'Fa' : 'En'
-                        }
-                    </p>
+                        <MdLanguage size={28}/>
                 </button>
             </div>
-            {
-                props.children
-            }
+            <div className='
+                flex lg:flex-row flex-col gap-4
+                xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md sm:max-w-screen-sm w-11/12
+                mx-auto
+                '
+            >
+                <Header/>
+                <div className='flex flex-col w-full gap-8 mb-10'>
+                    {props.children}
+                    <div
+                        className='
+                        dark:text-gray-400 dark:shadow-dark-inner dark:bg-dark
+                        shadow-light-inner bg-light rounded-full
+                        mx-auto text-center px-6 py-1.5 text-sm'
+                    >
+                        main srg dfgb main srg dfgh fh
+                    </div>
+                </div>
+
+            </div>
         </div>
     )
         ;
