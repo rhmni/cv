@@ -5,7 +5,7 @@ import HeaderItem from "../Components/HeaderItem";
 
 const Header = () => {
     return (
-        <div
+        <header
             className='
                      flex flex-col items-center
                      px-8 pt-14 pb-16 lg:mb-14
@@ -41,7 +41,7 @@ const Header = () => {
                 </HeaderItem>
 
             </ul>
-        </div>
+        </header>
     );
 };
 

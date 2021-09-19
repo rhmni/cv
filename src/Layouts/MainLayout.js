@@ -3,6 +3,7 @@ import {ThemeContext} from "../Context/themeContext";
 import {RiMoonFill, RiSunFill} from "react-icons/ri";
 import {MdLanguage} from "react-icons/md";
 import Header from "../Blocks/Header";
+import Footer from "../Blocks/Footer";
 
 
 const MainLayout = props => {
@@ -31,7 +32,7 @@ const MainLayout = props => {
                         transition duration-300
                     '
                 >
-                        {themeContext.theme.theme === 'light' ? <RiMoonFill/> : <RiSunFill/>}
+                    {themeContext.theme.theme === 'light' ? <RiMoonFill/> : <RiSunFill/>}
                 </button>
                 <button
                     className='
@@ -42,7 +43,7 @@ const MainLayout = props => {
                         transition duration-300
                     '
                 >
-                        <MdLanguage size={28}/>
+                    <MdLanguage size={28}/>
                 </button>
             </div>
             <div className='
@@ -53,7 +54,13 @@ const MainLayout = props => {
             >
                 <Header/>
                 <div className='flex flex-col w-full gap-8 mb-10'>
-                    {props.children}
+                    <div
+                        className='shadow-light-outer dark:shadow-dark-outer bg-light dark:bg-dark rounded-3xl p-12 flex flex-col'>
+
+                        {props.children}
+                        <Footer/>
+                    </div>
+
                     <div
                         className='
                         dark:text-gray-400 dark:shadow-dark-inner dark:bg-dark
@@ -66,8 +73,7 @@ const MainLayout = props => {
 
             </div>
         </div>
-    )
-        ;
+    );
 };
 
 export default MainLayout;

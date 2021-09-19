@@ -1,14 +1,11 @@
 import React from 'react';
 import MainLayout from "../Layouts/MainLayout";
 import SocialLink from "../Components/SocialLink";
-import Hr from "../Components/UI/Hr";
 import {
     RiGithubLine,
     RiLinkedinLine,
     RiInstagramLine,
     RiGoogleLine,
-    RiDownloadLine,
-    RiPrinterLine
 } from "react-icons/ri";
 
 
@@ -16,9 +13,7 @@ const Home = props => {
 
     return (
         <MainLayout>
-            <div
-                className='shadow-light-outer dark:shadow-dark-outer bg-light dark:bg-dark rounded-3xl p-12 flex flex-col'>
-                <div className='flex flex-col items-center my-16'>
+                <main className='flex flex-col items-center mt-16'>
                     <h1 className='text-5xl dark:text-gray-100 text-gray-700 text-center leading-tight'>
                         علی رحمانی
                     </h1>
@@ -39,47 +34,7 @@ const Home = props => {
                             <RiGoogleLine size={20}/>
                         </SocialLink>
                     </ul>
-                </div>
-                <Hr dir={'center'}/>
-                <div className='flex flex-row flex-wrap justify-between mt-14 gap-3'>
-                    <div className='flex flex-row'>
-                        <div
-                            className='flex items-center cursor-pointer text-gray-500 dark:text-gray-400 gap-3'
-                        >
-                                    <span
-                                        className='
-                                            flex flex-row items-center justify-center
-                                            rounded-full w-14 h-14 cursor-pointer text-red
-                                            shadow-light-outer hover:shadow-light-inner
-                                            dark:shadow-dark-outer dark:hover:shadow-dark-inner
-                                            transition duration-300
-                                        '
-                                    >
-                                        <RiPrinterLine size={25}/>
-                                    </span>
-                            <span>پرینت رزومه من</span>
-                        </div>
-                    </div>
-                    <div className='flex flex-row'>
-                        <div
-                            className='flex items-center cursor-pointer text-gray-500 dark:text-gray-400 gap-3'
-                        >
-                                    <span
-                                        className='
-                                            flex flex-row items-center justify-center
-                                            rounded-full w-14 h-14 cursor-pointer text-red
-                                            shadow-light-outer hover:shadow-light-inner
-                                            dark:shadow-dark-outer dark:hover:shadow-dark-inner
-                                            transition duration-300
-                                        '
-                                    >
-                                        <RiDownloadLine size={25}/>
-                                    </span>
-                            <span>دانلود رزومه من</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                </main>
         </MainLayout>
     );
 };
