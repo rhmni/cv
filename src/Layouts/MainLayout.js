@@ -55,7 +55,7 @@ const MainLayout = props => {
                 <Header/>
                 <div className='flex flex-col w-full gap-8 mb-10'>
                     <div
-                        className='shadow-light-outer dark:shadow-dark-outer bg-light dark:bg-dark rounded-3xl p-12 flex flex-col'>
+                        className='shadow-light-outer dark:shadow-dark-outer bg-light dark:bg-dark rounded-3xl lg:p-12 p-9 flex flex-col'>
 
                         {props.children}
                         <Footer/>

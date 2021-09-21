@@ -17,8 +17,8 @@ const Home = props => {
                     <h1 className='text-5xl dark:text-gray-100 text-gray-700 text-center leading-tight'>
                         علی رحمانی
                     </h1>
-                    <h3 className='mt-3.5 text-lg dark:text-gray-400 text-gray-500 text-center'>
-                        Full Stack Developer
+                    <h3 className='mt-2 text-lg dark:text-gray-400 text-gray-500 text-center'>
+                        برنامه نویس فرانت اند
                     </h3>
                     <ul className='flex flex-row flex-wrap justify-center mt-5 gap-2'>
                         <SocialLink link='https://www.linkedin.com/in/rhmni/' title='لینکدین'>
