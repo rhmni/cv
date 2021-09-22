@@ -1,7 +1,7 @@
 import React, {useContext, useEffect} from 'react';
 import {ThemeContext} from "../Context/themeContext";
 import {RiMoonFill, RiSunFill} from "react-icons/ri";
-import {MdLanguage} from "react-icons/md";
+import {MdTranslate} from "react-icons/md";
 import Header from "../Blocks/Header";
 import Footer from "../Blocks/Footer";
 
@@ -45,7 +45,7 @@ const MainLayout = props => {
                         transition duration-300
                     '
                 >
-                    <MdLanguage size={28}/>
+                    <MdTranslate size={27}/>
                 </button>
             </div>
             <div
