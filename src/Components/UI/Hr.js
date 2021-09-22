@@ -3,7 +3,7 @@ import React from 'react';
 const Hr = ({dir}) => {
     let classes = [
         'flex', 'flex-row', 'items-center',
-        'py-0.5', 'px-3',
+        'py-0.5', 'px-2.5',
         'shadow-light-inner', 'dark:shadow-dark-inner', 'rounded-full',
         'w-16', 'h-2',
     ];

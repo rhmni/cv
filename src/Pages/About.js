@@ -2,7 +2,6 @@ import React from 'react';
 import MainLayout from "../Layouts/MainLayout";
 import Hr from "../Components/UI/Hr";
 import {FcCheckmark} from "react-icons/fc";
-import {GrDocumentText} from "react-icons/gr";
 import ProgressBar from "../Components/ProgressBar";
 
 const About = props => {

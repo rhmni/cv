@@ -2,18 +2,20 @@ import React from 'react';
 import ProfileImage from "../assets/profile.jpg";
 import {RiCameraLine, RiHome2Line, RiPhoneLine, RiUser3Line} from "react-icons/ri";
 import HeaderItem from "../Components/HeaderItem";
+import {withRouter} from "react-router-dom";
 
-const Header = () => {
+const Header = props => {
+
     return (
         <header
             className='
-                     flex flex-col items-center
-                     px-8 pt-14 pb-16 lg:mb-14
-                     xl:w-96 lg:w-72 w-full
-                     bg-light dark:bg-dark shadow-light-outer dark:shadow-dark-outer rounded-3xl
-                     '
+                flex flex-col items-center h-168 lg:sticky lg:top-4
+                px-8 pt-12 pb-16 lg:mb-14
+                xl:w-96 lg:w-72 w-full
+                bg-light dark:bg-dark shadow-light-outer dark:shadow-dark-outer rounded-3xl
+            '
         >
-            <div className='mb-8 w-52 shadow-light-inner dark:shadow-dark-inner p-2 rounded-full'>
+            <div className='mb-8 w-48 shadow-light-inner dark:shadow-dark-inner p-2 rounded-full'>
                 <div className='shadow-light-outer dark:shadow-dark-outer p-2 rounded-full'>
                     <img src={ProfileImage} alt="" className='rounded-full'/>
                 </div>
@@ -24,19 +26,19 @@ const Header = () => {
             </div>
             <ul className='flex flex-col gap-4 w-full items-center'>
 
-                <HeaderItem isActive text='صفحه اصلی'>
+                <HeaderItem path='/' text='صفحه اصلی'>
                     <RiHome2Line size={27}/>
                 </HeaderItem>
 
-                <HeaderItem text='درباره من'>
+                <HeaderItem path='/about/' text='درباره من'>
                     <RiUser3Line size={27}/>
                 </HeaderItem>
 
-                <HeaderItem text='پروژه ها'>
+                <HeaderItem path='/projects/' text='پروژه ها'>
                     <RiCameraLine size={27}/>
                 </HeaderItem>
 
-                <HeaderItem text='ارتباط با من'>
+                <HeaderItem path='/contact/' text='ارتباط با من'>
                     <RiPhoneLine size={27}/>
                 </HeaderItem>
 
@@ -45,4 +47,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default withRouter(Header);
