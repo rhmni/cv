@@ -2,6 +2,7 @@ import React from 'react';
 import MainLayout from "../Layouts/MainLayout";
 import Hr from "../Components/UI/Hr";
 import {FcCheckmark} from "react-icons/fc";
+import {AiOutlineCalendar} from "react-icons/ai";
 import ProgressBar from "../Components/ProgressBar";
 
 const About = props => {
@@ -73,7 +74,7 @@ const About = props => {
                         </div>
                     </div>
                 </div>
-                <div className='flex- flex-row'>
+                <div>
                     <div className='flex flex-col'>
                         <p className='text-lg dark:text-gray-100 text-gray-700 mt-12 mb-2'>درباره من</p>
                         <Hr dir='rtl'/>
@@ -90,6 +91,104 @@ const About = props => {
                                     front
                                 </p>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <p className='text-lg dark:text-gray-100 text-gray-700 mt-10'>تجربیات</p>
+                <Hr dir='rtl'/>
+                <div className='flex flex-row mt-4'>
+                    <div className='w-11/12 mt-5'>
+                        <div className='flex gap-10 flex-col w-full'>
+
+                            <div className='flex flex-row gap-4 lg:gap-0'>
+                                <div className='w-1/12'>
+                                    <div className='w-2.5 h-2.5 mt-1.5 mx-auto bg-red rounded-full'/>
+                                </div>
+                                <div className='w-11/12'>
+                                    <p className='flex-wrap flex gap-2 mb-1.5'>
+                                        <span className='text-md dark:text-gray-100 text-gray-700'>مدرک کارشناسی نرم افزار</span>
+                                        <span
+                                            className='shadow-light-inner dark:shadow-dark-inner text-red py-1 px-4 rounded-full text-xs text-gray-400'>1 سال و ۴ ماه</span>
+                                    </p>
+                                    <p className='flex flex-row items-center text-gray-500 text-sm dark:text-gray-400 w-full'>
+                                        <span className='ml-3.5 text-lg'><AiOutlineCalendar size={22}/></span>
+                                        <span>مهر 1399 - مهر 1400</span>
+                                    </p>
+                                    <p className='mt-3 text-md dark:text-gray-400 text-gray-500 leading-7'>
+                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                                        گرافیک است چاپگرها
+                                        و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی
+                                        تکنولوژی مورد نیاز و
+                                        کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه
+                                        درصد گذشته حال و
+                                        آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را
+                                        برای طراحان رایانه
+                                        ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد در این صورت می
+                                        توان امید داشت که
+                                        تمام و دشواری موجود در ارائه راهکارها
+                                    </p>
+                                </div>
+                            </div>
+                            <div className='flex flex-row gap-4 lg:gap-0'>
+                                <div className='w-1/12'>
+                                    <div className='w-2.5 h-2.5 mt-1.5 mx-auto bg-red rounded-full'/>
+                                </div>
+                                <div className='w-11/12'>
+                                    <p className='flex-wrap flex gap-2 mb-1.5'>
+                                        <span className='text-md dark:text-gray-100 text-gray-700'>مدرک کارشناسی نرم افزار</span>
+                                        <span
+                                            className='shadow-light-inner dark:shadow-dark-inner text-red py-1 px-4 rounded-full text-xs text-gray-400'>1 سال و ۴ ماه</span>
+                                    </p>
+                                    <p className='flex flex-row items-center text-gray-500 text-sm dark:text-gray-400 w-full'>
+                                        <span className='ml-3.5 text-lg'><AiOutlineCalendar size={22}/></span>
+                                        <span>مهر 1399 - مهر 1400</span>
+                                    </p>
+                                    <p className='mt-3 text-md dark:text-gray-400 text-gray-500 leading-7'>
+                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                                        گرافیک است چاپگرها
+                                        و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی
+                                        تکنولوژی مورد نیاز و
+                                        کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه
+                                        درصد گذشته حال و
+                                        آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را
+                                        برای طراحان رایانه
+                                        ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد در این صورت می
+                                        توان امید داشت که
+                                        تمام و دشواری موجود در ارائه راهکارها
+                                    </p>
+                                </div>
+                            </div>
+                            <div className='flex flex-row gap-4 lg:gap-0'>
+                                <div className='w-1/12'>
+                                    <div className='w-2.5 h-2.5 mt-1.5 mx-auto bg-red rounded-full'/>
+                                </div>
+                                <div className='w-11/12'>
+                                    <p className='flex-wrap flex gap-2 mb-1.5'>
+                                        <span className='text-md dark:text-gray-100 text-gray-700'>مدرک کارشناسی نرم افزار</span>
+                                        <span
+                                            className='shadow-light-inner dark:shadow-dark-inner text-red py-1 px-4 rounded-full text-xs text-gray-400'>1 سال و ۴ ماه</span>
+                                    </p>
+                                    <p className='flex flex-row items-center text-gray-500 text-sm dark:text-gray-400 w-full'>
+                                        <span className='ml-3.5 text-lg'><AiOutlineCalendar size={22}/></span>
+                                        <span>مهر 1399 - مهر 1400</span>
+                                    </p>
+                                    <p className='mt-3 text-md dark:text-gray-400 text-gray-500 leading-7'>
+                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                                        گرافیک است چاپگرها
+                                        و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی
+                                        تکنولوژی مورد نیاز و
+                                        کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه
+                                        درصد گذشته حال و
+                                        آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را
+                                        برای طراحان رایانه
+                                        ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد در این صورت می
+                                        توان امید داشت که
+                                        تمام و دشواری موجود در ارائه راهکارها
+                                    </p>
+                                </div>
+                            </div>
+
+
                         </div>
                     </div>
                 </div>
