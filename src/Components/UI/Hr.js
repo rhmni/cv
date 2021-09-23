@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 
 const Hr = ({dir}) => {
     let classes = [
@@ -22,5 +23,10 @@ const Hr = ({dir}) => {
         </div>
     );
 };
+
+Hr.propTypes = {
+    dir: PropTypes.oneOf(['rtl', 'center', 'ltr']).isRequired,
+};
+
 
 export default Hr;

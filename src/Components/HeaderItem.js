@@ -1,5 +1,6 @@
 import React from 'react';
 import {withRouter} from "react-router-dom";
+import PropTypes from "prop-types";
 
 const HeaderItem = props => {
 
@@ -18,7 +19,7 @@ const HeaderItem = props => {
     if (props.match.path === props.path) classes.push('shadow-light-inner', 'dark:shadow-dark-inner');
     else classes.push('shadow-light-outer', 'dark:shadow-dark-outer');
 
-        return (
+    return (
         <li className='w-full'>
             <button onClick={handleClicked} className={classes.join(' ')}>
                 <span>{props.text}</span>
@@ -26,6 +27,12 @@ const HeaderItem = props => {
             </button>
         </li>
     );
+};
+
+HeaderItem.propTypes = {
+    path: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
+    children: PropTypes.element.isRequired,
 };
 
 export default withRouter(HeaderItem);

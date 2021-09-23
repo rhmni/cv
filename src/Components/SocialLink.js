@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 
 const SocialLink = ({title, children, link}) => {
     return (
@@ -18,5 +19,13 @@ const SocialLink = ({title, children, link}) => {
         </li>
     );
 };
+
+
+SocialLink.propTypes = {
+    title: PropTypes.string.isRequired,
+    children: PropTypes.element.isRequired,
+    link: PropTypes.string.isRequired,
+};
+
 
 export default SocialLink;

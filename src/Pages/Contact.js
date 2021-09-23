@@ -5,7 +5,7 @@ import {RiMapPinLine} from 'react-icons/ri';
 import {MdLanguage} from 'react-icons/md';
 import {IoMailOutline, IoCallOutline} from 'react-icons/io5';
 
-const Contact = () => {
+const Contact = props => {
     return (
         <MainLayout>
             <main className='flex flex-col justify-start'>

@@ -1,8 +1,8 @@
-import React, {useContext, useEffect} from 'react';
-
+import React from 'react';
 import Header from "../Blocks/Header";
 import Footer from "../Blocks/Footer";
 import ThemeLangButton from "../Components/ThemeLangButton";
+import PropTypes, {arrayOf, element} from "prop-types";
 
 
 const MainLayout = props => {
@@ -50,6 +50,10 @@ const MainLayout = props => {
             </div>
         </React.Fragment>
     );
+};
+
+MainLayout.propTypes = {
+    children: PropTypes.oneOfType([element, arrayOf(element)]).isRequired,
 };
 
 export default MainLayout;
