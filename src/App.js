@@ -5,6 +5,7 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Projects from "./Pages/Projects";
 import Contact from "./Pages/Contact";
+import {AppRoutes} from "./Routing/AppRoutes";
 
 
 const App = () => {
@@ -14,14 +15,16 @@ const App = () => {
         <ThemeContextProvider>
             <Router>
                 <Switch>
-                    <Route path='/' exact component={Home}/>
-                    <Route path='/about/' exact component={About}/>
-                    <Route path='/projects/' exact component={Projects}/>
-                    <Route path='/contact/' exact component={Contact}/>
+
+                    <Route path={AppRoutes.HOME} exact component={Home}/>
+                    <Route path={AppRoutes.ABOUT} exact component={About}/>
+                    <Route path={AppRoutes.PROJECTS} exact component={Projects}/>
+                    <Route path={AppRoutes.CONTACT} exact component={Contact}/>
 
                     <Route path='*'>
-                        <Redirect to='/'/>
+                        <Redirect to={AppRoutes.HOME}/>
                     </Route>
+
                 </Switch>
             </Router>
         </ThemeContextProvider>

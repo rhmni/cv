@@ -3,6 +3,8 @@ import ProfileImage from "../assets/profile.jpg";
 import {RiCameraLine, RiHome2Line, RiPhoneLine, RiUser3Line} from "react-icons/ri";
 import HeaderItem from "../Components/HeaderItem";
 import {withRouter} from "react-router-dom";
+import {AppRoutes} from "../Routing/AppRoutes";
+
 
 const Header = props => {
 
@@ -26,19 +28,19 @@ const Header = props => {
             </div>
             <ul className='flex flex-col gap-4 w-full items-center'>
 
-                <HeaderItem path='/' text='صفحه اصلی'>
+                <HeaderItem path={AppRoutes.HOME} text='صفحه اصلی'>
                     <RiHome2Line size={27}/>
                 </HeaderItem>
 
-                <HeaderItem path='/about/' text='درباره من'>
+                <HeaderItem path={AppRoutes.ABOUT} text='درباره من'>
                     <RiUser3Line size={27}/>
                 </HeaderItem>
 
-                <HeaderItem path='/projects/' text='پروژه ها'>
+                <HeaderItem path={AppRoutes.PROJECTS} text='پروژه ها'>
                     <RiCameraLine size={27}/>
                 </HeaderItem>
 
-                <HeaderItem path='/contact/' text='ارتباط با من'>
+                <HeaderItem path={AppRoutes.CONTACT} text='ارتباط با من'>
                     <RiPhoneLine size={27}/>
                 </HeaderItem>
 
