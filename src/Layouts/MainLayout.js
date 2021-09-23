@@ -3,7 +3,6 @@ import Header from "../Blocks/Header";
 import Footer from "../Blocks/Footer";
 import ThemeLangButton from "../Components/ThemeLangButton";
 import PropTypes, {arrayOf, element} from "prop-types";
-import {IoArrowUpCircleOutline} from 'react-icons/io5'
 import GoToTop from "../Components/GoToTop";
 
 
