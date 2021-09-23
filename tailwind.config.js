@@ -19,7 +19,7 @@ module.exports = {
                 'dark-outer': 'inset 0px 0px 0px #202125, inset 0px 0px 0px #353535, 3px 3px 3px #202125, -3px -3px 3px #353535',
             },
             height: {
-                '168': '42rem',
+                '160': '40rem',
             },
             width: {
                 '0%': '0%',

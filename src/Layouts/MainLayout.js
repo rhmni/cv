@@ -1,11 +1,17 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Header from "../Blocks/Header";
 import Footer from "../Blocks/Footer";
 import ThemeLangButton from "../Components/ThemeLangButton";
 import PropTypes, {arrayOf, element} from "prop-types";
+import {IoArrowUpCircleOutline} from 'react-icons/io5'
+import GoToTop from "../Components/GoToTop";
 
 
 const MainLayout = props => {
+
+    useEffect(() => {
+        window.scrollTo(0,0)
+    }, [])
 
     return (
         <React.Fragment>
@@ -48,6 +54,7 @@ const MainLayout = props => {
 
                 </div>
             </div>
+            <GoToTop />
         </React.Fragment>
     );
 };
