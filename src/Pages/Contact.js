@@ -4,8 +4,12 @@ import Hr from "../Components/UI/Hr";
 import {RiMapPinLine} from 'react-icons/ri';
 import {MdLanguage} from 'react-icons/md';
 import {IoMailOutline, IoCallOutline} from 'react-icons/io5';
+import PersonalData from "../Data/cvData/MainData.json";
 
 const Contact = props => {
+
+    const personalData = PersonalData
+
     return (
         <MainLayout>
             <main className='flex flex-col justify-start'>
@@ -20,7 +24,7 @@ const Contact = props => {
                     <div className='w-full rounded-2xl shadow-light-inner dark:shadow-dark-inner p-2 invisible md:visible'>
                         <div
                             className='h-52 flex flex-row justify-center items-center w-full rounded-2xl shadow-light-outer dark:shadow-dark-outer'>
-                            <p className='text-xl visible dark:text-gray-100 dark:text-gray-100 text-gray-700 text-center'>ایران ، اصفهان ، اصفهان</p>
+                            <p className='text-xl visible dark:text-gray-100 dark:text-gray-100 text-gray-700 text-center'>{personalData.address}</p>
                         </div>
                     </div>
 
@@ -37,7 +41,7 @@ const Contact = props => {
                                     mx-auto text-center px-6 py-1.5 text-sm
                                 '
                             >
-                                ایمیل : im.rhmni@gmail.com
+                                ایمیل : {personalData.email}
                             </div>
                         </div>
                         <div className='flex flex-col items-center w-full md:w-1/3 px-2 gap-4'>
@@ -52,7 +56,7 @@ const Contact = props => {
                                     mx-auto text-center px-6 py-1.5 text-sm
                                 '
                             >
-                                تماس : 09134437585
+                                تماس : {personalData.phone}
                             </div>
                         </div>
                         <div className='flex flex-col items-center w-full md:w-1/3 px-2 gap-4'>
@@ -67,7 +71,7 @@ const Contact = props => {
                                     mx-auto text-center px-6 py-1.5 text-sm
                                 '
                             >
-                                سایت : www.rhmni.ir
+                                سایت : {personalData.site}
                             </div>
                         </div>
                     </div>

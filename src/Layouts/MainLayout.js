@@ -4,9 +4,12 @@ import Footer from "../Blocks/Footer";
 import ThemeLangButton from "../Components/ThemeLangButton";
 import PropTypes, {arrayOf, element} from "prop-types";
 import GoToTop from "../Components/GoToTop";
+import PersonalData from "../Data/cvData/MainData.json";
 
 
 const MainLayout = props => {
+
+    const personalData = PersonalData
 
     useEffect(() => {
         window.scrollTo(0,0)
@@ -47,7 +50,7 @@ const MainLayout = props => {
                             mx-auto text-center px-6 py-1.5 text-sm
                         '
                         >
-                            پانویس
+                            {personalData.footnote}
                         </div>
                     </div>
 
