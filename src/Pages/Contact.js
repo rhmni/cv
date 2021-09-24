@@ -13,14 +13,14 @@ const Contact = props => {
                 <Hr dir='rtl'/>
                 <div className='w-full mt-10'>
 
-                    <div className='hidden -mb-12 bg-light bg-blue-600 dark:bg-dark dark:shadow-dark-inner relative md:flex flex-row items-center justify-center text-red w-24 h-24 rounded-full mx-auto shadow-light-inner'>
+                    <div className='md:-mb-12 -mb-16 bg-light bg-blue-600 dark:bg-dark dark:shadow-dark-inner relative flex flex-row items-center justify-center text-red w-24 h-24 rounded-full mx-auto shadow-light-inner'>
                         <RiMapPinLine size={45} title='آدرس'/>
                     </div>
 
-                    <div className='hidden w-full rounded-2xl shadow-light-inner dark:shadow-dark-inner p-2 md:block'>
+                    <div className='w-full rounded-2xl shadow-light-inner dark:shadow-dark-inner p-2 invisible md:visible'>
                         <div
                             className='h-52 flex flex-row justify-center items-center w-full rounded-2xl shadow-light-outer dark:shadow-dark-outer'>
-                            <p className='text-xl dark:text-gray-100 dark:text-gray-100 text-gray-700'>ایران ، اصفهان ، اصفهان</p>
+                            <p className='text-xl visible dark:text-gray-100 dark:text-gray-100 text-gray-700 text-center'>ایران ، اصفهان ، اصفهان</p>
                         </div>
                     </div>
 

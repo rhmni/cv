@@ -196,15 +196,15 @@ const About = props => {
                 <Hr dir='rtl'/>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 mt-10'>
                     <a href="" target='_blank'>
-                        <div className='w-full shadow-light-inner p-2 rounded-2xl'>
-                            <div className='flex flex-row gap-5 w-full shadow-light-outer rounded-2xl p-5 items-center'>
-                                <div className='flex-shrink-0 w-24 h-24 text-red hidden sm:flex justify-center items-center rounded-full shadow-light-inner'>
+                        <div className='w-full shadow-light-inner dark:shadow-dark-inner p-2 rounded-2xl'>
+                            <div className='flex flex-row gap-5 w-full shadow-light-outer dark:shadow-dark-outer rounded-2xl p-5 items-center'>
+                                <div className='flex-shrink-0 w-24 h-24 text-red hidden sm:flex justify-center items-center rounded-full shadow-light-inner dark:shadow-dark-inner'>
                                     <GiRibbonMedal size={45}/>
                                 </div>
                                 <div className='flex flex-col'>
-                                    <h3 className='text-gray-700 text-md mb-0.5'>آموزش پایتون از کورسرا</h3>
-                                    <p className='text-sm text-gray-500 mb-0.5'>سریال مدرک : 3456</p>
-                                    <p className='text-xs text-gray-400'>27 خرداد 1400</p>
+                                    <h3 className='text-gray-700 text-md mb-0.5 dark:text-gray-100'>آموزش پایتون از کورسرا</h3>
+                                    <p className='text-sm text-gray-500 dark:text-gray-400 mb-0.5'>سریال مدرک : 3456</p>
+                                    <p className='text-xs text-gray-400 dark:text-gray-500'>27 خرداد 1400</p>
                                 </div>
                             </div>
                         </div>
