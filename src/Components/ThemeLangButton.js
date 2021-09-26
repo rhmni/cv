@@ -19,7 +19,7 @@ const ThemeLangButton = props => {
     }
 
     return (
-        <div className='flex flex-row w-32 justify-between fixed top-12 left-8'>
+        <div className='flex flex-row w-32 justify-between fixed top-12 left-8 z-50'>
             <button
                 onClick={handleTheme}
                 className='

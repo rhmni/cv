@@ -5,7 +5,7 @@ import {VscChromeClose} from "react-icons/vsc";
 import {AiOutlineCalendar} from "react-icons/ai";
 import {GiRibbonMedal} from "react-icons/gi";
 import {FcCheckmark} from "react-icons/fc";
-import ProgressBar from "../Components/ProgressBar";
+import ProgressBar from "../Components/UI/ProgressBar";
 import PersonalData from "../Data/cvData/MainData.json";
 
 const About = props => {
