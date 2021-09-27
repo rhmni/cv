@@ -1,25 +1,19 @@
-import React, {useContext, useEffect} from 'react';
+import React, {useEffect} from 'react';
 import {RiMoonFill, RiSunFill} from "react-icons/ri";
 import {MdTranslate} from "react-icons/md";
-import {ThemeContext} from "../Context/themeContext";
-import {LangContext} from "../Context/langContext";
+import useLang from "../utils/hooks/useLang";
+import useTheme from "../utils/hooks/useTheme";
 
 
 const ThemeLangButton = props => {
-
-    const themeContext = useContext(ThemeContext);
-    const langContext = useContext(LangContext);
-
-    const handleLang = () => {
-        if (langContext.lang.lang === 'en') langContext.dispatch({type: 'setFa'});
-        else langContext.dispatch({type: 'setEn'});
-    }
+    const [lang, setLang] = useLang();
+    const [theme, setTheme] = useTheme();
 
     useEffect(() => {
-        if (themeContext.theme.theme === 'dark') document.documentElement.classList.add('dark')
+        if (theme === 'dark') document.documentElement.classList.add('dark')
         else document.documentElement.classList.remove('dark')
 
-        if (langContext.lang.lang === 'fa') {
+        if (lang === 'fa') {
             document.dir = 'rtl';
             document.documentElement.lang = 'fa';
         } else {
@@ -28,9 +22,14 @@ const ThemeLangButton = props => {
         }
     })
 
+    const handleLang = () => {
+        if (lang === 'en') setLang.dispatch({type: 'setFa'});
+        else setLang.dispatch({type: 'setEn'});
+    }
+
     const handleTheme = () => {
-        if (themeContext.theme.theme === 'light') themeContext.dispatch({type: 'setDark'});
-        else themeContext.dispatch({type: 'setLight'});
+        if (theme === 'light') setTheme.dispatch({type: 'setDark'});
+        else setTheme.dispatch({type: 'setLight'});
     }
 
     return (
@@ -45,7 +44,7 @@ const ThemeLangButton = props => {
                         transition duration-300
                     '
             >
-                {themeContext.theme.theme === 'light' ? <RiMoonFill/> : <RiSunFill/>}
+                {theme === 'light' ? <RiMoonFill/> : <RiSunFill/>}
             </button>
             <button
                 onClick={handleLang}
