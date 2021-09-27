@@ -13,8 +13,13 @@ input[type=email], input[type=number] {
     direction: ltr;
 }
 
-input[type=email]::placeholder, input[type=number]::placeholder {
-    text-align: right;
+.placeholder::placeholder {
+    @apply ltr:text-left rtl:text-right
+}
+
+
+.placeholder-ltr {
+    text-align: left;
 }
 
 *::-webkit-scrollbar {

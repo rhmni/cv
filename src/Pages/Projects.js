@@ -10,7 +10,7 @@ const Projects = props => {
         <MainLayout>
             <main className='flex flex-col justify-start'>
                 <p className='text-lg dark:text-gray-100 text-gray-700 mb-2'>پروژه های من</p>
-                <Hr dir='rtl'/>
+                <Hr />
                 <ul className='flex flex-col justify-center lg:flex-row gap-5 items-center mt-8 mx-auto mb-8'>
                     <li className='shadow-light-inner text-gray-700 dark:shadow-dark-inner dark:text-gray-400 rounded-full'>
                         <button className='px-5 py-2 rounded-full uppercase'>
@@ -23,7 +23,7 @@ const Projects = props => {
                         </button>
                     </li>
                 </ul>
-                <Hr dir={'center'}/>
+                <Hr isCenetr/>
                 <div className='flex flex-col mt-10'>
                     <div className='w-full shadow-light-inner dark:shadow-dark-inner p-2 mb-5 rounded-2xl'>
                         <div className='w-full p-1.5 shadow-light-outer dark:shadow-dark-outer rounded-2xl'>
@@ -56,7 +56,7 @@ const Projects = props => {
                         ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد در این صورت می توان امید داشت که
                         تمام و دشواری موجود در ارائه راهکارها
                     </p>
-                    <Hr dir={'center'}/>
+                    <Hr isCenetr/>
                 </div>
             </main>
         </MainLayout>

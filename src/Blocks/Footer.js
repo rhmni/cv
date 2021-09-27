@@ -6,7 +6,7 @@ const Footer = props => {
     return (
         <footer>
             <div className='w-full h-16'/>
-            <Hr dir={'center'}/>
+            <Hr isCenetr />
             <div className='flex flex-row flex-wrap justify-between mt-14 gap-3'>
                 <div className='flex flex-row'>
                     <div

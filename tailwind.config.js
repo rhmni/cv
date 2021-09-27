@@ -50,7 +50,16 @@ module.exports = {
         extend: {
             boxShadow: ['dark'],
             darkMode: ['focus'],
+            flexDirection: ['direction'],
+            margin: ['direction'],
+            inset: ['direction'],
+            response:['direction'],
+            borderWidth:['direction'],
+            rotate:['direction'],
+            textAlign:['direction'],
         },
     },
-    plugins: [],
+    plugins: [
+        require('tailwindcss-dir')(),
+    ],
 }

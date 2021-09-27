@@ -32,7 +32,7 @@ const Contact = props => {
             <Toaster/>
             <main className='flex flex-col justify-start'>
                 <p className='text-lg dark:text-gray-100 text-gray-700 mb-2'>اطلاعات تماس</p>
-                <Hr dir='rtl'/>
+                <Hr />
                 <div className='w-full mt-10 mb-12'>
 
                     <div
@@ -102,7 +102,7 @@ const Contact = props => {
 
                 </div>
                 <p className='text-lg dark:text-gray-100 text-gray-700 mb-2'>ارسال ایمیل</p>
-                <Hr dir='rtl'/>
+                <Hr />
                 <div className='mt-8'>
                     <ContactForm/>
                 </div>

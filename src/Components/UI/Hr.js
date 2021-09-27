@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from "prop-types";
 
-const Hr = ({dir}) => {
+const Hr = ({isCenetr}) => {
     let classes = [
         'flex', 'flex-row', 'items-center',
         'py-0.5', 'px-2.5',
@@ -9,13 +9,15 @@ const Hr = ({dir}) => {
         'w-16', 'h-2',
     ];
 
-    if (dir === 'center') {
-        classes.push('mx-auto', 'justify-center')
-    } else if (dir === 'rtl') {
-        classes.push('ml-auto', 'justify-start')
-    } else if (dir === 'ltr') {
-        classes.push('mr-auto', 'justify-end')
-    }
+    if(isCenetr) classes.push('mx-auto', 'justify-center');
+
+    // if (dir === 'center') {
+    //     classes.push('mx-auto', 'justify-center')
+    // } else if (dir === 'rtl') {
+    //     classes.push('ml-auto', 'justify-start')
+    // } else if (dir === 'ltr') {
+    //     classes.push('mr-auto', 'justify-end')
+    // }
 
     return (
         <div className={classes.join(' ')}>
@@ -25,7 +27,11 @@ const Hr = ({dir}) => {
 };
 
 Hr.propTypes = {
-    dir: PropTypes.oneOf(['rtl', 'center', 'ltr']).isRequired,
+    isCenetr: PropTypes.bool.isRequired,
+};
+
+Hr.defaultProps = {
+    isCenetr: false,
 };
 
 
