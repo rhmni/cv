@@ -6,9 +6,24 @@ import {MdLanguage} from 'react-icons/md';
 import {IoMailOutline, IoCallOutline} from 'react-icons/io5';
 import PersonalData from "../Data/cvData/MainData.json";
 import ContactForm from "../Blocks/ContactForm";
-import {Toaster} from "react-hot-toast";
+import {toast, Toaster} from "react-hot-toast";
 
 const Contact = props => {
+
+    const handleCopyEmail = () => {
+        navigator.clipboard.writeText(personalData.email);
+        toast.success('ایمیل کپی شد');
+    }
+
+    const handleCopyPhone = () => {
+        navigator.clipboard.writeText(personalData.phone);
+        toast.success('شماره تلفن کپی شد');
+    }
+
+    const handleCopySite = () => {
+        navigator.clipboard.writeText(personalData.site);
+        toast.success('آدرس سایت کپی شد');
+    }
 
     const personalData = PersonalData
 
@@ -41,6 +56,7 @@ const Contact = props => {
                                 <IoMailOutline size={30}/>
                             </div>
                             <div
+                                onClick={handleCopyEmail}
                                 className='cursor-pointer w-full
                                     dark:text-gray-400 dark:shadow-dark-inner dark:bg-dark
                                     shadow-light-inner bg-light rounded-full text-gray-500
@@ -56,6 +72,7 @@ const Contact = props => {
                                 <IoCallOutline size={30}/>
                             </div>
                             <div
+                                onClick={handleCopyPhone}
                                 className='cursor-pointer w-full
                                     dark:text-gray-400 dark:shadow-dark-inner dark:bg-dark
                                     shadow-light-inner bg-light rounded-full text-gray-500
@@ -71,6 +88,7 @@ const Contact = props => {
                                 <MdLanguage size={33}/>
                             </div>
                             <div
+                                onClick={handleCopySite}
                                 className='cursor-pointer w-full
                                     dark:text-gray-400 dark:shadow-dark-inner dark:bg-dark
                                     shadow-light-inner bg-light rounded-full text-gray-500

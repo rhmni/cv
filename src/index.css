@@ -9,7 +9,13 @@
     font-weight: 100;
 }
 
+input[type=email], input[type=number] {
+    direction: ltr;
+}
 
+input[type=email]::placeholder, input[type=number]::placeholder {
+    text-align: right;
+}
 
 * {
     font-family: font-fa;
