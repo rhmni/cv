@@ -4,14 +4,14 @@ import {RiCameraLine, RiHome2Line, RiPhoneLine, RiUser3Line} from "react-icons/r
 import HeaderItem from "../Components/HeaderItem";
 import {withRouter} from "react-router-dom";
 import {AppRoutes} from "../Routing/AppRoutes";
-import PersonalData from "../Data/cvData/MainData.json";
 import useTranslate from "../utils/hooks/useTranslate";
+import useDb from "../utils/hooks/useDb";
 
 
 
 const Header = props => {
 
-    const personalData = PersonalData;
+    const dbData = useDb();
     const translateData = useTranslate();
 
     return (
@@ -29,8 +29,8 @@ const Header = props => {
                 </div>
             </div>
             <div className='mb-6'>
-                <h2 className='text-center text-3xl mb-2 dark:text-gray-200 text-gray-700'>{personalData.name}</h2>
-                <h5 className='text-center dark:text-gray-400 text-gray-500 text-lg'>{personalData.subName}</h5>
+                <h2 className='text-center text-3xl mb-2 dark:text-gray-200 text-gray-700'>{dbData.name}</h2>
+                <h5 className='text-center dark:text-gray-400 text-gray-500 text-lg'>{dbData.subTitle}</h5>
             </div>
             <ul className='flex flex-col gap-4 w-full items-center'>
 

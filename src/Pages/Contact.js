@@ -4,31 +4,31 @@ import Hr from "../Components/UI/Hr";
 import {RiMapPinLine} from 'react-icons/ri';
 import {MdLanguage} from 'react-icons/md';
 import {IoMailOutline, IoCallOutline} from 'react-icons/io5';
-import PersonalData from "../Data/cvData/MainData.json";
 import ContactForm from "../Blocks/ContactForm";
 import {toast, Toaster} from "react-hot-toast";
 import useTranslate from "../utils/hooks/useTranslate";
+import useDb from "../utils/hooks/useDb";
 
 const Contact = props => {
 
     const translateData = useTranslate();
+    const dbData = useDb();
 
     const handleCopyEmail = () => {
-        navigator.clipboard.writeText(personalData.email);
+        navigator.clipboard.writeText(dbData.email);
         toast.success(translateData.toastMessage.emailCopy);
     }
 
     const handleCopyPhone = () => {
-        navigator.clipboard.writeText(personalData.phone);
+        navigator.clipboard.writeText(dbData.phone);
         toast.success(translateData.toastMessage.phoneCopy);
     }
 
     const handleCopySite = () => {
-        navigator.clipboard.writeText(personalData.site);
+        navigator.clipboard.writeText(dbData.site);
         toast.success(translateData.toastMessage.siteCopy);
     }
 
-    const personalData = PersonalData
 
     return (
         <MainLayout>
@@ -47,7 +47,7 @@ const Contact = props => {
                         className='w-full rounded-2xl shadow-light-inner dark:shadow-dark-inner p-2 invisible md:visible'>
                         <div
                             className='h-52 flex flex-row justify-center items-center w-full rounded-2xl shadow-light-outer dark:shadow-dark-outer'>
-                            <p className='text-xl visible dark:text-gray-100 dark:text-gray-100 text-gray-700 text-center'>{personalData.address}</p>
+                            <p className='text-xl visible dark:text-gray-100 dark:text-gray-100 text-gray-700 text-center'>{dbData.city}</p>
                         </div>
                     </div>
 
@@ -66,7 +66,7 @@ const Contact = props => {
                                     mx-auto text-center px-6 py-1.5 text-sm
                                 '
                             >
-                                {translateData.email} : {personalData.email}
+                                {translateData.email} : {dbData.email}
                             </div>
                         </div>
                         <div className='flex flex-col items-center w-full md:w-1/3 px-2 gap-4'>
@@ -82,7 +82,7 @@ const Contact = props => {
                                     mx-auto text-center px-6 py-1.5 text-sm
                                 '
                             >
-                                {translateData.phone} : {personalData.phone}
+                                {translateData.phone} : {dbData.phone}
                             </div>
                         </div>
                         <div className='flex flex-col items-center w-full md:w-1/3 px-2 gap-4'>
@@ -98,7 +98,7 @@ const Contact = props => {
                                     mx-auto text-center px-6 py-1.5 text-sm
                                 '
                             >
-                                {translateData.site} : {personalData.site}
+                                {translateData.site} : {dbData.site}
                             </div>
                         </div>
                     </div>

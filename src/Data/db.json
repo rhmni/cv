@@ -1,0 +1,140 @@
+{
+  "fa": {
+    "name": "علی رحمانی",
+    "subTitle": "برنامه نویس فرانت اند",
+    "age": 19,
+    "city": "ایران ، اصفهان",
+    "phone":"09134437585",
+    "isRemote": true,
+    "site": "www.rhmni.ir",
+    "email": "im.rhmni@gmail.com",
+    "instagram": "https://www.instagram.com/im.rhmni/",
+    "github": "https://github.com/rhmni/",
+    "linkedin": "https://www.linkedin.com/in/rhmni/",
+    "twitter": "https://twitter.com/im_rhmni",
+    "footnote": "Develop By Ali Rahmani",
+    "bio": [
+      "علی رحمانی برنامه نویس فرانت اند با ریکت و تیل ویند",
+      "علی رحمانی برنامه نویس فرانت اند با ریکت و تیل ویند علی رحمانی برنامه نویس فرانت اند با ریکت و تیل ویند"
+    ],
+    "skillContainers": [
+      {
+        "name": "Front",
+        "color": "red",
+        "skills": [
+          {
+            "name": "react",
+            "percent": 45
+          },
+          {
+            "name": "python",
+            "percent": 55
+          }
+        ]
+      }
+    ],
+    "experiencies": [
+      {
+        "title": "مدرک کارشناسی نرم افزار",
+        "periodOfTime": "1 سال و ۲ ماه",
+        "date": "مهر 1399 - مهر 1400",
+        "isNow": false,
+        "link": "",
+        "descriptions": [
+          "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.",
+          "در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها."
+        ]
+      }
+    ],
+    "educations": [
+      {
+        "title": "مدرک کارشناسی نرم افزار",
+        "periodOfTime": "1 سال و ۲ ماه",
+        "date": "مهر 1399 - مهر 1400",
+        "isNow": false,
+        "link": "ddd",
+        "descriptions": [
+          "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.",
+          "در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها."
+        ]
+      }
+    ],
+    "certificates": [
+      {
+        "title": "آموزش پایتون از کورسرا",
+        "subtitle": "سریال مدرک : ۲۸۵۴۲۰۱",
+        "link": "",
+        "date": "۲۱ خرداد ۱۴۰۰"
+      }
+    ]
+  },
+  "en": {
+    "name": "Ali Rahmani",
+    "subTitle": "Front-End Developer",
+    "age": 19,
+    "city": "Iran, Isfahan",
+    "phone":"09134437585",
+    "isRemote": true,
+    "site": "www.rhmni.ir",
+    "email": "im.rhmni@gmail.com",
+    "instagram": "https://www.instagram.com/im.rhmni/",
+    "github": "https://github.com/rhmni/",
+    "linkedin": "https://www.linkedin.com/in/rhmni/",
+    "twitter": "https://twitter.com/im_rhmni",
+    "footnote": "Develop By Ali Rahmani",
+    "bio": [
+      "Ali Rahmani , Front-End developer with React and tailwind",
+      "Ali Rahmani , Front-End developer with React and tailwind Ali Rahmani , Front-End developer with React and tailwind"
+    ],
+    "skillContainers": [
+      {
+        "name": "Front",
+        "color": "red",
+        "skills": [
+          {
+            "name": "react",
+            "percent": 45
+          },
+          {
+            "name": "python",
+            "percent": 55
+          }
+        ]
+      }
+    ],
+    "experiencies": [
+      {
+        "title": "Bachelor's degree in software",
+        "periodOfTime": "1 year 2 month",
+        "date": "sep 2020 - april 2021",
+        "isNow": false,
+        "link": "",
+        "descriptions": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "Aliquet porttitor lacus luctus accumsan tortor posuere ac. "
+        ]
+      }
+    ],
+    "educations": [
+      {
+        "title": "Bachelor's degree in software",
+        "periodOfTime": "1 year 2 month",
+        "date": "sep 2020 - april 2021",
+        "isNow": false,
+        "link": "dd",
+        "descriptions": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "Aliquet porttitor lacus luctus accumsan tortor posuere ac. "
+        ]
+      }
+    ],
+    "certificates": [
+      {
+        "title": "python crash course",
+        "subtitle": "certificate id : 2854201",
+        "link": "",
+        "date": "31 may 2021"
+      }
+    ]
+  }
+}
