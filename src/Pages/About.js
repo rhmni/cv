@@ -7,15 +7,17 @@ import {GiRibbonMedal} from "react-icons/gi";
 import {FcCheckmark} from "react-icons/fc";
 import ProgressBar from "../Components/UI/ProgressBar";
 import PersonalData from "../Data/cvData/MainData.json";
+import useTranslate from "../utils/hooks/useTranslate";
 
 const About = props => {
 
-    const personalData = PersonalData
+    const personalData = PersonalData;
+    const translateData = useTranslate();
 
     return (
         <MainLayout>
             <main className='flex flex-col justify-start'>
-                <p className='text-lg dark:text-gray-100 text-gray-700 mb-2'>درباره من</p>
+                <p className='text-lg dark:text-gray-100 text-gray-700 mb-2'>{translateData.aboutMe}</p>
                 <Hr />
                 <h1 className='text-4xl dark:text-gray-100 text-gray-700 mt-8'>{personalData.name}</h1>
                 <h3 className='mt-2.5 text-lg dark:text-gray-400 text-gray-500'>
@@ -32,19 +34,19 @@ const About = props => {
                             <ul className='p-3'>
                                 <li className='flex flex-col lg:flex-row lg:border-b dark:border-gray-600 justify-between'>
                                     <span
-                                        className='w-full lg:w-1/3 text-center text-gray-700 py-2.5 pb-0 lg:rtl:border-l lg:ltr:border-r dark:border-gray-600 dark:text-gray-100'>نام</span>
+                                        className='w-full lg:w-1/3 text-center text-gray-700 py-2.5 pb-0 lg:rtl:border-l lg:ltr:border-r dark:border-gray-600 dark:text-gray-100'>{translateData.charts.name}</span>
                                     <span
                                         className='w-full lg:w-2/3 text-center text-gray-500 py-2.5 dark:text-gray-400'>{personalData.name}</span>
                                 </li>
                                 <li className='flex flex-col lg:flex-row lg:border-b dark:border-gray-600 justify-between'>
                                     <span
-                                        className='w-full lg:w-1/3 text-center text-gray-700 py-2.5 pb-0 lg:rtl:border-l lg:ltr:border-r dark:border-gray-600 dark:text-gray-100'>سن</span>
+                                        className='w-full lg:w-1/3 text-center text-gray-700 py-2.5 pb-0 lg:rtl:border-l lg:ltr:border-r dark:border-gray-600 dark:text-gray-100'>{translateData.charts.age}</span>
                                     <span
                                         className='w-full lg:w-2/3 text-center text-gray-500 py-2.5 dark:text-gray-400'>{personalData.age}</span>
                                 </li>
                                 <li className='flex flex-col lg:flex-row justify-between'>
                                     <span
-                                        className='w-full lg:w-1/3 text-center text-gray-700 py-2.5 pb-0 lg:rtl:border-l lg:ltr:border-r dark:border-gray-600 dark:text-gray-100'>ساکن</span>
+                                        className='w-full lg:w-1/3 text-center text-gray-700 py-2.5 pb-0 lg:rtl:border-l lg:ltr:border-r dark:border-gray-600 dark:text-gray-100'>{translateData.charts.city}</span>
                                     <span
                                         className='w-full lg:w-2/3 text-center text-gray-500 py-2.5 dark:text-gray-400'>{personalData.address}</span>
                                 </li>
@@ -56,19 +58,19 @@ const About = props => {
                             <ul className='p-3'>
                                 <li className='flex flex-col lg:flex-row lg:border-b dark:border-gray-600 justify-between'>
                                     <span
-                                        className='w-full lg:w-1/3 text-center text-gray-700 py-2.5 pb-0 lg:rtl:border-l lg:ltr:border-r dark:border-gray-600 dark:text-gray-100'>ایمیل</span>
+                                        className='w-full lg:w-1/3 text-center text-gray-700 py-2.5 pb-0 lg:rtl:border-l lg:ltr:border-r dark:border-gray-600 dark:text-gray-100'>{translateData.charts.email}</span>
                                     <span
                                         className='w-full lg:w-2/3 text-center text-gray-500 py-2.5 dark:text-gray-400'>{personalData.email}</span>
                                 </li>
                                 <li className='flex flex-col lg:flex-row lg:border-b dark:border-gray-600 justify-between'>
                                     <span
-                                        className='w-full lg:w-1/3 text-center text-gray-700 py-2.5 pb-0 lg:rtl:border-l lg:ltr:border-r dark:border-gray-600 dark:text-gray-100'>تلفن</span>
+                                        className='w-full lg:w-1/3 text-center text-gray-700 py-2.5 pb-0 lg:rtl:border-l lg:ltr:border-r dark:border-gray-600 dark:text-gray-100'>{translateData.charts.phone}</span>
                                     <span
                                         className='w-full lg:w-2/3 text-center text-gray-500 py-2.5 dark:text-gray-400'>{personalData.phone}</span>
                                 </li>
                                 <li className='flex flex-col lg:flex-row justify-between'>
                                     <span
-                                        className='w-full lg:w-1/3 text-center text-gray-700 py-2.5 pb-0 lg:rtl:border-l lg:ltr:border-r dark:border-gray-600 dark:text-gray-100'>دورکاری</span>
+                                        className='w-full lg:w-1/3 text-center text-gray-700 py-2.5 pb-0 lg:rtl:border-l lg:ltr:border-r dark:border-gray-600 dark:text-gray-100'>{translateData.charts.remote}</span>
                                     <span
                                         className='w-full lg:w-2/3 text-center text-gray-500 py-2.5 dark:text-gray-400 flex flex-row justify-center'
                                     >
@@ -83,7 +85,7 @@ const About = props => {
                 </div>
                 <div>
                     <div className='flex flex-col'>
-                        <p className='text-lg dark:text-gray-100 text-gray-700 mt-12 mb-2'>مهارتها</p>
+                        <p className='text-lg dark:text-gray-100 text-gray-700 mt-12 mb-2'>{translateData.skills}</p>
                         <Hr />
                         <div className='flex flex-col gap-6 lg:gap-0 items-center lg:flex-row mt-8'>
                             <div className='flex flex-col lg:w-10/12 w-11/12'>
@@ -108,7 +110,7 @@ const About = props => {
                         </div>
                     </div>
                 </div>
-                <p className='text-lg dark:text-gray-100 text-gray-700 mt-10'>تجربیات</p>
+                <p className='text-lg dark:text-gray-100 text-gray-700 mt-10'>{translateData.experience}</p>
                 <Hr />
                 <div className='flex flex-row mt-4'>
                     <div className='w-11/12 mt-5'>
@@ -180,7 +182,7 @@ const About = props => {
                         </div>
                     </div>
                 </div>
-                <p className='text-lg dark:text-gray-100 text-gray-700 mt-10'>مدارک</p>
+                <p className='text-lg dark:text-gray-100 text-gray-700 mt-10'>{translateData.experience}</p>
                 <Hr />
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 mt-10'>
                     <a href="" target='_blank'>

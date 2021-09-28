@@ -1,8 +1,12 @@
 import React from 'react';
 import Hr from "../Components/UI/Hr";
 import {RiDownloadLine, RiPrinterLine} from "react-icons/ri";
+import useTranslate from "../utils/hooks/useTranslate";
 
 const Footer = props => {
+
+    const translateData = useTranslate();
+
     return (
         <footer>
             <div className='w-full h-16'/>
@@ -23,7 +27,7 @@ const Footer = props => {
                                     >
                                         <RiPrinterLine size={25}/>
                                     </span>
-                        <span>پرینت رزومه من</span>
+                        <span>{translateData.printCv}</span>
                     </div>
                 </div>
                 <div className='flex flex-row'>
@@ -41,7 +45,7 @@ const Footer = props => {
                                     >
                                         <RiDownloadLine size={25}/>
                                     </span>
-                        <span>دانلود رزومه من</span>
+                        <span>{translateData.downloadCv}</span>
                     </div>
                 </div>
             </div>

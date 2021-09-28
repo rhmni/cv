@@ -4,12 +4,16 @@ import Hr from "../Components/UI/Hr";
 import ProjectPhoto from '../assets/images/1.jpg'
 import {BiShowAlt} from 'react-icons/bi';
 import {RiGithubLine} from 'react-icons/ri';
+import useTranslate from "../utils/hooks/useTranslate";
 
 const Projects = props => {
+
+    const translateData = useTranslate();
+
     return (
         <MainLayout>
             <main className='flex flex-col justify-start'>
-                <p className='text-lg dark:text-gray-100 text-gray-700 mb-2'>پروژه های من</p>
+                <p className='text-lg dark:text-gray-100 text-gray-700 mb-2'>{translateData.myProjects}</p>
                 <Hr />
                 <ul className='flex flex-col justify-center lg:flex-row gap-5 items-center mt-8 mx-auto mb-8'>
                     <li className='shadow-light-inner text-gray-700 dark:shadow-dark-inner dark:text-gray-400 rounded-full'>
@@ -38,12 +42,12 @@ const Projects = props => {
 
                         <p className='flex flex-row items-center gap-1'>
                             <span className='ml-0.5 text-gray-700 dark:text-gray-400'><BiShowAlt size={20}/></span>
-                            <span className='text-gray-700 dark:text-gray-400'> مشاهده <a target='_blank' className='text-red' href="">دمو</a></span>
+                            <span className='text-gray-700 dark:text-gray-400'> {translateData.projectLink.demo.wordOne} <a target='_blank' className='text-red' href="">{translateData.projectLink.demo.wordTwo}</a></span>
                         </p>
 
                         <p className='flex flex-row items-center gap-1'>
                             <span className='ml-0.5 text-gray-700 dark:text-gray-400'><RiGithubLine size={20}/></span>
-                            <span className='text-gray-700 dark:text-gray-400'> مشاهده در <a target='_blank' className='text-red' href="">گیت هاب</a></span>
+                            <span className='text-gray-700 dark:text-gray-400'> {translateData.projectLink.github.wordOne} <a target='_blank' className='text-red' href="">{translateData.projectLink.github.wordTwo}</a></span>
                         </p>
 
                     </div>

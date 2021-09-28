@@ -7,22 +7,25 @@ import {IoMailOutline, IoCallOutline} from 'react-icons/io5';
 import PersonalData from "../Data/cvData/MainData.json";
 import ContactForm from "../Blocks/ContactForm";
 import {toast, Toaster} from "react-hot-toast";
+import useTranslate from "../utils/hooks/useTranslate";
 
 const Contact = props => {
 
+    const translateData = useTranslate();
+
     const handleCopyEmail = () => {
         navigator.clipboard.writeText(personalData.email);
-        toast.success('ایمیل کپی شد');
+        toast.success(translateData.toastMessage.emailCopy);
     }
 
     const handleCopyPhone = () => {
         navigator.clipboard.writeText(personalData.phone);
-        toast.success('شماره تلفن کپی شد');
+        toast.success(translateData.toastMessage.phoneCopy);
     }
 
     const handleCopySite = () => {
         navigator.clipboard.writeText(personalData.site);
-        toast.success('آدرس سایت کپی شد');
+        toast.success(translateData.toastMessage.siteCopy);
     }
 
     const personalData = PersonalData
@@ -31,13 +34,13 @@ const Contact = props => {
         <MainLayout>
             <Toaster/>
             <main className='flex flex-col justify-start'>
-                <p className='text-lg dark:text-gray-100 text-gray-700 mb-2'>اطلاعات تماس</p>
+                <p className='text-lg dark:text-gray-100 text-gray-700 mb-2'>{translateData.contactInfo}</p>
                 <Hr />
                 <div className='w-full mt-10 mb-12'>
 
                     <div
                         className='md:-mb-12 -mb-16 bg-light bg-blue-600 dark:bg-dark dark:shadow-dark-inner relative flex flex-row items-center justify-center text-red w-24 h-24 rounded-full mx-auto shadow-light-inner'>
-                        <RiMapPinLine size={45} title='آدرس'/>
+                        <RiMapPinLine size={45}/>
                     </div>
 
                     <div
@@ -63,7 +66,7 @@ const Contact = props => {
                                     mx-auto text-center px-6 py-1.5 text-sm
                                 '
                             >
-                                ایمیل : {personalData.email}
+                                {translateData.email} : {personalData.email}
                             </div>
                         </div>
                         <div className='flex flex-col items-center w-full md:w-1/3 px-2 gap-4'>
@@ -79,7 +82,7 @@ const Contact = props => {
                                     mx-auto text-center px-6 py-1.5 text-sm
                                 '
                             >
-                                تماس : {personalData.phone}
+                                {translateData.phone} : {personalData.phone}
                             </div>
                         </div>
                         <div className='flex flex-col items-center w-full md:w-1/3 px-2 gap-4'>
@@ -95,13 +98,13 @@ const Contact = props => {
                                     mx-auto text-center px-6 py-1.5 text-sm
                                 '
                             >
-                                سایت : {personalData.site}
+                                {translateData.site} : {personalData.site}
                             </div>
                         </div>
                     </div>
 
                 </div>
-                <p className='text-lg dark:text-gray-100 text-gray-700 mb-2'>ارسال ایمیل</p>
+                <p className='text-lg dark:text-gray-100 text-gray-700 mb-2'>{translateData.sendEmail}</p>
                 <Hr />
                 <div className='mt-8'>
                     <ContactForm/>

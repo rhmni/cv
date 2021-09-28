@@ -7,13 +7,16 @@ import {
     RiLinkedinLine,
     RiInstagramLine,
     RiGoogleLine,
+    RiTwitterLine,
 } from "react-icons/ri";
+import useTranslate from "../utils/hooks/useTranslate";
 
 
 
 const Home = props => {
 
-    const personalData = PersonalData
+    const personalData = PersonalData;
+    const translateData = useTranslate();
 
     return (
         <MainLayout>
@@ -25,17 +28,20 @@ const Home = props => {
                     برنامه نویس فرانت اند
                 </h3>
                 <ul className='flex flex-row flex-wrap justify-center mt-5 gap-2'>
-                    <SocialLink link={personalData.linkedin} title='لینکدین'>
+                    <SocialLink link={personalData.linkedin} title={translateData.socialLinks.linkedin}>
                         <RiLinkedinLine size={20}/>
                     </SocialLink>
-                    <SocialLink link={personalData.github} title='گیت هاب'>
+                    <SocialLink link={personalData.github} title={translateData.socialLinks.github}>
                         <RiGithubLine size={20}/>
                     </SocialLink>
-                    <SocialLink link={personalData.instagram} title='اینستاگرام'>
+                    <SocialLink link={personalData.instagram} title={translateData.socialLinks.instagram}>
                         <RiInstagramLine size={20}/>
                     </SocialLink>
-                    <SocialLink link={`mailto:${personalData.email}`} title='ایمیل'>
+                    <SocialLink link={`mailto:${personalData.email}`} title={translateData.socialLinks.email}>
                         <RiGoogleLine size={20}/>
+                    </SocialLink>
+                    <SocialLink link={`https://twitter.com/im_rhmni`} title={translateData.socialLinks.twitter}>
+                        <RiTwitterLine size={20}/>
                     </SocialLink>
                 </ul>
             </main>

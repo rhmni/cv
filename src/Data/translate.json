@@ -1,0 +1,154 @@
+{
+  "fa": {
+    "pageOneTitle": "صفحه اصلی",
+    "pageTwoTitle": "درباره من",
+    "pageThreeTitle": "پروژه های من",
+    "pageFourTitle": "تماس با من",
+    "downloadCv": "دانلود رزومه من",
+    "printCv": "پرینت رزومه من",
+    "aboutMe": "درباره من",
+    "skills": "مهارت ها",
+    "experience": "تجربیات",
+    "certificats": "مدارک",
+    "myProjects": "پروژه های من",
+    "contactInfo": "اطلاعات تماس",
+    "email": "ایمیل",
+    "phone": "تلفن",
+    "site": "سایت",
+    "SendEmail": "ارسال ایمیل",
+    "namePlaceholder": "نام",
+    "emailPlaceholder": "ایمیل",
+    "subjectPlaceholder": "موضوع",
+    "bodyPlaceholder": "متن پیام",
+    "submitBtn": "ارسال پیام",
+    "socialLinks": {
+      "linkedin": "لینکدین",
+      "github": "گیت هاب",
+      "instagram": "اینستاگرام",
+      "email": "ایمیل",
+      "twitter": "توییتر"
+    },
+    "charts": {
+      "name": "نام",
+      "age": "سن",
+      "city": "شهر",
+      "email": "ایمیل",
+      "phone": "تلفن",
+      "remote": "دورکاری"
+    },
+    "projectLink": {
+      "demo": {
+        "wordOne": "مشاهده",
+        "wordTwo": "دمو"
+      },
+      "github": {
+        "wordOne": "مشاهده در",
+        "wordTwo": "گیت هاب"
+      }
+    },
+    "formErrors": {
+      "name": {
+        "min": "نام کوتاه است",
+        "max": "نام بیش از حد بزرگ است",
+        "required": "نام نمیتواند خالی باشد"
+      },
+      "email": {
+        "min": "ایمیل کوتاه است",
+        "email": "آدرس ایمیل نامعتبر است",
+        "required": "آدرس ایمیل نمیتواند خالی باشد"
+      },
+      "subject": {
+        "min": "موضوع کوتاه است",
+        "max": "موضوع بیش از حد بزرگ است"
+      },
+      "body": {
+        "min": "پیام شما کوتاه است",
+        "required": "پیام شما نمیتواند خالی باشد"
+      }
+    },
+    "toastMessage": {
+      "formLoading":"در حال ارسال",
+      "formError":"پیام ارسال نشد لطفا دوباره امتحان کنید",
+      "formSuccess":"پیام شما ارسال شد",
+      "emailCopy": "ایمیل کپی شد",
+      "siteCopy": "آدرس سایت کپی شد",
+      "phoneCopy": "تلفن کپی شد"
+    }
+  },
+  "en": {
+    "pageOneTitle": "Home",
+    "pageTwoTitle": "About",
+    "pageThreeTitle": "My Projects",
+    "pageFourTitle": "Contact",
+    "downloadCv": "Download My Cv",
+    "printCv": "Print My Cv",
+    "aboutMe": "About Me",
+    "skills": "Skills",
+    "experience": "Experience",
+    "certificats": "Certificats",
+    "myProjects": "My Projects",
+    "contactInfo": "Contact Info",
+    "email": "Email",
+    "phone": "Phone",
+    "site": "Site",
+    "SendEmail": "SEND EMAIL",
+    "namePlaceholder": "Name",
+    "emailPlaceholder": "Email",
+    "subjectPlaceholder": "Subject",
+    "bodyPlaceholder": "Message",
+    "submitBtn": "Send Message",
+    "socialLinks": {
+      "linkedin": "Linkedin",
+      "github": "Github",
+      "instagram": "Instagram",
+      "email": "Email",
+      "twitter": "Twitter"
+    },
+    "charts": {
+      "name": "Name",
+      "age": "Age",
+      "city": "City",
+      "email": "email",
+      "phone": "phone",
+      "remote": "Remote"
+    },
+    "projectLink": {
+      "demo": {
+        "wordOne": "View",
+        "wordTwo": "Demo"
+      },
+      "github": {
+        "wordOne": "View On",
+        "wordTwo": "Github"
+      }
+    },
+    "formErrors": {
+      "name": {
+        "min": "name is short",
+        "max": "name is too big",
+        "required": "name can't be empty"
+      },
+      "email": {
+        "min": "email is short",
+        "email": "invalid email",
+        "required": "email can't be empty"
+      },
+      "subject": {
+        "min": "subject is short",
+        "max": "subject is too big"
+      },
+      "body": {
+        "min": "your message is short",
+        "required": "your message can't be empty"
+      }
+    },
+    "toastMessage": {
+      "formLoading":"Sending",
+      "formError":"Message Not Sent Please Try Again",
+      "formSuccess":"Your Message Has Been Sent",
+      "emailCopy": "Email Copied",
+      "siteCopy": "Site Url Copied",
+      "phoneCopy": "Phone Copied"
+    }
+  }
+}
