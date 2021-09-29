@@ -37,7 +37,7 @@ const Home = props => {
 
     return (
         <MainLayout>
-            <main className='flex flex-col items-center mt-16'>
+            <main className='flex flex-col items-center mt-16 ltr:font-en rtl:font-fa'>
                 <h1 className='text-5xl dark:text-gray-100 text-gray-700 text-center leading-tight'>
                     {dbData.name}
                 </h1>

@@ -20,7 +20,7 @@ const HeaderItem = props => {
     else classes.push('shadow-light-outer', 'dark:shadow-dark-outer');
 
     return (
-        <li className='w-full'>
+        <li className='w-full ltr:font-en rtl:font-fa'>
             <button onClick={handleClicked} className={classes.join(' ')}>
                 <span>{props.text}</span>
                 <i className='text-red'>{props.children}</i>

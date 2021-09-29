@@ -8,6 +8,7 @@ import ContactForm from "../Blocks/ContactForm";
 import {toast, Toaster} from "react-hot-toast";
 import useTranslate from "../utils/hooks/useTranslate";
 import useDb from "../utils/hooks/useDb";
+import Title from "../Components/Title";
 
 const Contact = props => {
 
@@ -32,10 +33,9 @@ const Contact = props => {
 
     return (
         <MainLayout>
-            <Toaster/>
+            <div className='ltr:font-en rtl:font-fa'><Toaster /></div>
             <main className='flex flex-col justify-start'>
-                <p className='text-lg dark:text-gray-100 text-gray-700 mb-2'>{translateData.contactInfo}</p>
-                <Hr />
+                <Title title={translateData.contactInfo} />
                 <div className='w-full mt-10 mb-12'>
 
                     <div
@@ -47,7 +47,7 @@ const Contact = props => {
                         className='w-full rounded-2xl shadow-light-inner dark:shadow-dark-inner p-2 invisible md:visible'>
                         <div
                             className='h-52 flex flex-row justify-center items-center w-full rounded-2xl shadow-light-outer dark:shadow-dark-outer'>
-                            <p className='text-xl visible dark:text-gray-100 dark:text-gray-100 text-gray-700 text-center'>{dbData.city}</p>
+                            <p className='text-xl visible dark:text-gray-100 dark:text-gray-100 text-gray-700 text-center ltr:font-en rtl:font-fa'>{dbData.city}</p>
                         </div>
                     </div>
 
@@ -66,7 +66,9 @@ const Contact = props => {
                                     mx-auto text-center px-6 py-1.5 text-sm
                                 '
                             >
-                                {translateData.email} : {dbData.email}
+                                <span className='ltr:font-en rtl:font-fa'>{translateData.email} </span>
+                                :
+                                <span className='font-en'> {dbData.email}</span>
                             </div>
                         </div>
                         <div className='flex flex-col items-center w-full md:w-1/3 px-2 gap-4'>
@@ -82,7 +84,9 @@ const Contact = props => {
                                     mx-auto text-center px-6 py-1.5 text-sm
                                 '
                             >
-                                {translateData.phone} : {dbData.phone}
+                                <span className='ltr:font-en rtl:font-fa'>{translateData.phone} </span>
+                                :
+                                <span className='font-en'> {dbData.phone}</span>
                             </div>
                         </div>
                         <div className='flex flex-col items-center w-full md:w-1/3 px-2 gap-4'>
@@ -98,16 +102,17 @@ const Contact = props => {
                                     mx-auto text-center px-6 py-1.5 text-sm
                                 '
                             >
-                                {translateData.site} : {dbData.site}
+                                <span className='ltr:font-en rtl:font-fa'>{translateData.site} </span>
+                                :
+                                <span className='font-en'> {dbData.site}</span>
                             </div>
                         </div>
                     </div>
 
                 </div>
-                <p className='text-lg dark:text-gray-100 text-gray-700 mb-2'>{translateData.sendEmail}</p>
-                <Hr />
+                <Title title={translateData.sendEmail} />
                 <div className='mt-8'>
-                    <ContactForm/>
+                    <ContactForm />
                 </div>
             </main>
         </MainLayout>

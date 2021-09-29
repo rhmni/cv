@@ -11,7 +11,7 @@ const Footer = props => {
         <footer>
             <div className='w-full h-16'/>
             <Hr isCenetr />
-            <div className='flex flex-row flex-wrap justify-between mt-14 gap-3'>
+            <div className='flex flex-row flex-wrap justify-between mt-14 gap-3 ltr:font-en rtl:font-fa ltr:font-semibold'>
                 <div className='flex flex-row'>
                     <div
                         className='flex items-center cursor-pointer text-gray-500 dark:text-gray-400 gap-3'

@@ -2,11 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @font-face {
     font-family: "font-fa";
     src: local("IRANYekanWebMedium"),
     url('assets/fonts/IRANYekanWebMedium.woff') format("woff");
     font-weight: 100;
+}
+
+@font-face {
+    font-family: "font-en";
+    src: local("Inter-roman-latin"),
+    url('assets/fonts/Inter-roman-latin.woff2') format("woff");
+    font-weight: 400;
+}
+
+* {
+    outline: none;
 }
 
 input[type=email], input[type=number] {
@@ -16,7 +28,6 @@ input[type=email], input[type=number] {
 .placeholder::placeholder {
     @apply ltr:text-left rtl:text-right
 }
-
 
 .placeholder-ltr {
     text-align: left;
@@ -37,10 +48,4 @@ input[type=email], input[type=number] {
 
 *::-webkit-scrollbar-thumb:hover {
     background: #555;
-}
-
-* {
-    font-family: font-fa;
-    outline: none;
-    scrollbar-width: thin;
 }

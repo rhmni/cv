@@ -49,7 +49,7 @@ const MainLayout = props => {
                             className='
                             dark:text-gray-400 dark:shadow-dark-inner dark:bg-dark
                             shadow-light-inner bg-light rounded-full text-gray-600
-                            mx-auto text-center px-6 py-1.5 text-sm
+                            mx-auto text-center px-6 py-1.5 text-sm ltr:font-en rtl:font-fa
                         '
                         >
                             {dbData.footnote}

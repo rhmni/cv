@@ -43,21 +43,27 @@ module.exports = {
                 '90%': '90%',
                 '95%': '95%',
                 '100%': '100%',
-            }
+            },
+            fontFamily: {
+                'fa': ['font-fa'],
+                'en': ['font-en'],
+            },
         },
     },
     variants: {
         extend: {
-            animation:['responsive', 'hover'],
+            animation: ['responsive', 'hover'],
             boxShadow: ['dark'],
             darkMode: ['focus'],
             flexDirection: ['direction'],
             margin: ['direction'],
             inset: ['direction'],
-            response:['direction'],
-            borderWidth:['direction'],
-            rotate:['direction'],
-            textAlign:['direction'],
+            response: ['direction'],
+            borderWidth: ['direction'],
+            rotate: ['direction'],
+            textAlign: ['direction'],
+            fontFamily: ['direction'],
+            fontWeight: ['direction'],
         },
     },
     plugins: [

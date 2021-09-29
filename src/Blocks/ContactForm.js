@@ -74,7 +74,12 @@ const ContactForm = props => {
 
                     <button
                         type='submit'
-                        className='transition duration-300 mt-7 w-full sm:w-44 dark:shadow-dark-outer shadow-light-outer hover:shadow-light-inner py-2 rounded-xl text-green-600 dark:hover:shadow-dark-inner'
+                        className='
+                            transition duration-300
+                            mt-7 py-2 w-full sm:w-44 ltr:font-en rtl:font-fa
+                            dark:shadow-dark-outer shadow-light-outer hover:shadow-light-inner dark:hover:shadow-dark-inner
+                            rounded-xl text-green-600
+                        '
                     >
                         {translateData.submitBtn}
                     </button>

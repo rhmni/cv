@@ -5,6 +5,7 @@ import ProjectPhoto from '../assets/images/1.jpg'
 import {BiShowAlt} from 'react-icons/bi';
 import {RiGithubLine} from 'react-icons/ri';
 import useTranslate from "../utils/hooks/useTranslate";
+import Title from "../Components/Title";
 
 const Projects = props => {
 
@@ -13,9 +14,8 @@ const Projects = props => {
     return (
         <MainLayout>
             <main className='flex flex-col justify-start'>
-                <p className='text-lg dark:text-gray-100 text-gray-700 mb-2'>{translateData.myProjects}</p>
-                <Hr />
-                <ul className='flex flex-col justify-center lg:flex-row gap-5 items-center mt-8 mx-auto mb-8'>
+                <Title title={translateData.myProjects} />
+                <ul className='flex flex-col justify-center lg:flex-row gap-5 items-center mt-8 mx-auto mb-8 ltr:font-en rtl:font-fa'>
                     <li className='shadow-light-inner text-gray-700 dark:shadow-dark-inner dark:text-gray-400 rounded-full'>
                         <button className='px-5 py-2 rounded-full uppercase'>
                             بک اند
@@ -35,10 +35,10 @@ const Projects = props => {
                         </div>
                     </div>
                     <h2 className='flex-wrap flex gap-2 mb-2.5'>
-                        <span className='text-xl text-gray-700 dark:text-gray-100'>فروشگاه اینترنتی با فریم ورک جنگو </span>
-                        <span className='shadow-light-inner dark:shadow-dark-inner text-red py-1 px-4 rounded-full text-sm text-gray-400'>۱ مهر 1400</span>
+                        <span className='text-xl text-gray-700 dark:text-gray-100 ltr:font-en rtl:font-fa'>فروشگاه اینترنتی با فریم ورک جنگو </span>
+                        <span className='shadow-light-inner dark:shadow-dark-inner text-red py-1 px-4 rounded-full text-sm text-gray-400 ltr:font-en rtl:font-fa'>۱ مهر 1400</span>
                     </h2>
-                    <div className='flex flex-row flex-wrap gap-4 justify-start'>
+                    <div className='flex flex-row flex-wrap gap-4 justify-start ltr:font-en rtl:font-fa'>
 
                         <p className='flex flex-row items-center gap-1'>
                             <span className='ml-0.5 text-gray-700 dark:text-gray-400'><BiShowAlt size={20}/></span>
@@ -52,7 +52,7 @@ const Projects = props => {
 
                     </div>
                     <div className='w-full h-1.5 my-3 shadow-light-inner dark:shadow-dark-inner rounded-full' />
-                    <p className='text-md dark:text-gray-400 text-gray-500 leading-7 mb-8'>
+                    <p className='text-md dark:text-gray-400 text-gray-500 leading-7 mb-8 ltr:font-en rtl:font-fa'>
                         لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها
                         و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
                         کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و
