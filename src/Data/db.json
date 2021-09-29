@@ -70,6 +70,40 @@
         "link": "",
         "date": "۲۱ خرداد ۱۴۰۰"
       }
+    ],
+    "projectsCategory": [
+      {
+        "tag": "back",
+        "title": "بک اند"
+      },
+      {
+        "tag": "front",
+        "title": "فرانت اند"
+      }
+    ],
+    "projects": [
+      {
+        "tag": "front",
+        "title": "فروشگاه اینترنتی با فریم ورک ریکت",
+        "demoLink": "https://www.demo.com",
+        "githubLink": "https://www.github.com",
+        "date": "۱ مهر 1400",
+        "descriptions": [
+          "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.",
+          "در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها است."
+        ]
+      },
+      {
+        "tag": "back",
+        "title": "فروشگاه اینترنتی با فریم ورک جنگو",
+        "demoLink": "https://www.demo.com",
+        "githubLink": "https://www.github.com",
+        "date": "۱ مهر 1400",
+        "descriptions": [
+          "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.",
+          "در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها."
+        ]
+      }
     ]
   },
   "en": {
@@ -142,6 +176,40 @@
         "subtitle": "certificate id : 2854201",
         "link": "",
         "date": "31 may 2021"
+      }
+    ],
+    "projectsCategory": [
+      {
+        "tag": "back",
+        "title": "Back End"
+      },
+      {
+        "tag": "front",
+        "title": "Front End"
+      }
+    ],
+    "projects": [
+      {
+        "tag": "front",
+        "title": "Market place with react library",
+        "demoLink": "https://www.demo.com",
+        "githubLink": "https://www.github.com",
+        "date": "1 Sep 2020",
+        "descriptions": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "Aliquet porttitor lacus luctus accumsan tortor posuere ac. "
+        ]
+      },
+      {
+        "tag": "back",
+        "title": "Market place with django framework",
+        "demoLink": "https://www.demo.com",
+        "githubLink": "https://www.github.com",
+        "date": "1 Sep 2020",
+        "descriptions": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "Aliquet porttitor lacus luctus accumsan tortor posuere ac."
+        ]
       }
     ]
   }
