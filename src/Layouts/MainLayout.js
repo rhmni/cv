@@ -5,6 +5,7 @@ import ThemeLangButton from "../Components/ThemeLangButton";
 import PropTypes, {arrayOf, element} from "prop-types";
 import GoToTop from "../Components/GoToTop"
 import useDb from "../utils/hooks/useDb";
+import BgAnimation from "../Components/BgAnimation";
 
 
 const MainLayout = props => {
@@ -19,6 +20,7 @@ const MainLayout = props => {
         <React.Fragment>
             <div className='w-full block lg:hidden h-20 -mt-20 shadow-2xl sticky -top-20' />
             <ThemeLangButton />
+            <BgAnimation />
             <div className='bg-body-light dark:bg-dark pt-36'>
 
                 <div
@@ -29,7 +31,7 @@ const MainLayout = props => {
                 '
                 >
                     <Header/>
-                    <div className='flex flex-col w-full gap-8 mb-10'>
+                    <div className='flex flex-col w-full gap-8 mb-10 z-40'>
                         <div
                             className='
                             flex flex-col

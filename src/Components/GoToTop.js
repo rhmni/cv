@@ -14,7 +14,7 @@ const GoToTop = props => {
         <button
             onClick={handleGoToTop}
             className='
-                flex flex-row justify-center items-center
+                flex flex-row justify-center items-center z-50 lg:hover:animate-bounce
                 fixed bottom-10 sm:bottom-16 rtl:left-10 sm:rtl:left-16 ltr:right-10 sm:ltr:right-16
                 transition duration-300
                 dark:bg-dark dark:shadow-dark-outer dark:hover:shadow-dark-inner

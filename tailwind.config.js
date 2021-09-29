@@ -48,6 +48,7 @@ module.exports = {
     },
     variants: {
         extend: {
+            animation:['responsive', 'hover'],
             boxShadow: ['dark'],
             darkMode: ['focus'],
             flexDirection: ['direction'],

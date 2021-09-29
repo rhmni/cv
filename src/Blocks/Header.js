@@ -17,7 +17,7 @@ const Header = props => {
     return (
         <header
             className='
-                flex flex-col items-center h-160 lg:sticky lg:top-4
+                flex flex-col items-center h-160 lg:sticky lg:top-4 z-40
                 px-8 pt-12 pb-16 lg:mb-14
                 xl:w-96 lg:w-72 w-full
                 bg-light dark:bg-dark shadow-light-outer dark:shadow-dark-outer rounded-3xl
