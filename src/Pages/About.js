@@ -95,7 +95,7 @@ const About = props => {
                                     <div className='flex flex-col lg:w-10/12 w-11/12'>
                                         {
                                             skillContainer.skills.map((skill, index) => (
-                                                <ProgressBar key={index} name={skill.name} width={skill.percent}/>
+                                                <ProgressBar key={index} name={skill.name} color={skillContainer.color} width={skill.percent}/>
                                             ))
                                         }
                                     </div>
@@ -237,7 +237,7 @@ const About = props => {
                                             <p className='text-sm text-gray-500 dark:text-gray-400 mb-0.5'>{certificate.subtitle}</p>
                                             <p className='text-xs text-gray-400 dark:text-gray-500'>{certificate.date}</p>
                                         </div>
-                                    </div>import PersonalData from '../Data/cvData/MainData.json';
+                                    </div>
 
                                 </div>
                             </a>
