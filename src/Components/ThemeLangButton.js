@@ -3,6 +3,7 @@ import {RiMoonFill, RiSunFill} from "react-icons/ri";
 import {MdTranslate} from "react-icons/md";
 import useLang from "../utils/hooks/useLang";
 import useTheme from "../utils/hooks/useTheme";
+import useSetting from "../utils/hooks/useSetting";
 
 
 const ThemeLangButton = props => {
@@ -10,6 +11,8 @@ const ThemeLangButton = props => {
     const [lang, setLang] = useLang();
 
     const [theme, setTheme] = useTheme();
+
+    const settingData = useSetting();
 
     useEffect(() => {
         if (theme === 'dark') document.documentElement.classList.add('dark')
@@ -35,31 +38,37 @@ const ThemeLangButton = props => {
     }
 
     return (
-        <div className='flex flex-row w-32 justify-between fixed top-12 rtl:left-8 ltr:right-8 z-50'>
-            <button
-                onClick={handleTheme}
-                className='
+        <div className={`${settingData.themeChange && settingData.bilingualSite ? 'justify-between' : 'justify-end'} flex flex-row w-32 fixed top-12 rtl:left-8 ltr:right-8 z-50`}>
+            {
+                settingData.themeChange &&
+                    <button
+                        onClick={handleTheme}
+                        className='
+                            flex flex-row justify-center items-center
+                            bg-light shadow-light-outer hover:shadow-light-inner
+                            dark:text-gray-100 dark:shadow-dark-outer dark:hover:shadow-dark-inner dark:bg-dark
+                            text-2xl w-14 h-14 rounded-2xl text-gray-700
+                            transition duration-300
+                        '
+                    >
+                        {theme === 'light' ? <RiMoonFill/> : <RiSunFill/>}
+                    </button>
+            }
+            {
+                settingData.bilingualSite &&
+                <button
+                    onClick={handleLang}
+                    className='
                         flex flex-row justify-center items-center
                         bg-light shadow-light-outer hover:shadow-light-inner
                         dark:text-gray-100 dark:shadow-dark-outer dark:hover:shadow-dark-inner dark:bg-dark
                         text-2xl w-14 h-14 rounded-2xl text-gray-700
                         transition duration-300
                     '
-            >
-                {theme === 'light' ? <RiMoonFill/> : <RiSunFill/>}
-            </button>
-            <button
-                onClick={handleLang}
-                className='
-                    flex flex-row justify-center items-center
-                    bg-light shadow-light-outer hover:shadow-light-inner
-                    dark:text-gray-100 dark:shadow-dark-outer dark:hover:shadow-dark-inner dark:bg-dark
-                    text-2xl w-14 h-14 rounded-2xl text-gray-700
-                    transition duration-300
-                '
-            >
-                <MdTranslate size={27}/>
-            </button>
+                >
+                    <MdTranslate size={27}/>
+                </button>
+            }
         </div>
     );
 };

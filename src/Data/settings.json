@@ -1,0 +1,20 @@
+{
+  "footNote": true,
+  "backgroundAnimation": true,
+  "goToTopBtn": true,
+  "themeChange": true,
+  "bilingualSite": true,
+  "linkedin": true,
+  "github": true,
+  "instagram": true,
+  "email": true,
+  "twitter": true,
+  "skype": true,
+  "bio": true,
+  "charts": true,
+  "skills": true,
+  "experience": true,
+  "education": true,
+  "certificates": true,
+  "contactForm": true
+}

@@ -1,4 +1,4 @@
-import React, {useEffect, useMemo} from 'react';
+import React from 'react';
 import ProfileImage from "../assets/images/profile.jpg";
 import {RiCameraLine, RiHome2Line, RiPhoneLine, RiUser3Line} from "react-icons/ri";
 import HeaderItem from "../Components/HeaderItem";

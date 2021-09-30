@@ -11,7 +11,7 @@ import {
 } from "react-icons/ri";
 import useTranslate from "../utils/hooks/useTranslate";
 import useDb from "../utils/hooks/useDb";
-
+import useSetting from "../utils/hooks/useSetting";
 
 
 const Home = props => {
@@ -21,6 +21,8 @@ const Home = props => {
     const dbData = useDb();
 
     const translateData = useTranslate();
+
+    const settingData = useSetting();
 
     useEffect(() => {
         const typed = new Typed(typedElement.current, {
@@ -46,27 +48,27 @@ const Home = props => {
                 <h3 ref={typedElement} className='mt-2 text-lg dark:text-gray-400 text-gray-500 text-center'/>
                 <ul className='flex flex-row flex-wrap justify-center mt-5 gap-2'>
 
-                    <SocialLink link={dbData.linkedin} title={translateData.socialLinks.linkedin}>
+                    <SocialLink isShow={settingData.linkedin} link={dbData.linkedin} title={translateData.socialLinks.linkedin}>
                         <RiLinkedinLine size={20}/>
                     </SocialLink>
 
-                    <SocialLink link={dbData.github} title={translateData.socialLinks.github}>
+                    <SocialLink isShow={settingData.github} link={dbData.github} title={translateData.socialLinks.github}>
                         <RiGithubLine size={20}/>
                     </SocialLink>
 
-                    <SocialLink link={dbData.instagram} title={translateData.socialLinks.instagram}>
+                    <SocialLink isShow={settingData.instagram} link={dbData.instagram} title={translateData.socialLinks.instagram}>
                         <RiInstagramLine size={20}/>
                     </SocialLink>
 
-                    <SocialLink link={`mailto:${dbData.email}`} title={translateData.socialLinks.email}>
+                    <SocialLink isShow={settingData.email} link={`mailto:${dbData.email}`} title={translateData.socialLinks.email}>
                         <RiGoogleLine size={20}/>
                     </SocialLink>
 
-                    <SocialLink link={dbData.twitter} title={translateData.socialLinks.twitter}>
+                    <SocialLink isShow={settingData.twitter} link={dbData.twitter} title={translateData.socialLinks.twitter}>
                         <RiTwitterLine size={20}/>
                     </SocialLink>
 
-                    <SocialLink link={dbData.skype} title={translateData.socialLinks.skype}>
+                    <SocialLink isShow={settingData.skype} link={dbData.skype} title={translateData.socialLinks.skype}>
                         <RiSkypeLine size={23}/>
                     </SocialLink>
 

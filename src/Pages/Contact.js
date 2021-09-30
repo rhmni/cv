@@ -8,12 +8,15 @@ import {toast, Toaster} from "react-hot-toast";
 import useTranslate from "../utils/hooks/useTranslate";
 import useDb from "../utils/hooks/useDb";
 import Title from "../Components/Title";
+import useSetting from "../utils/hooks/useSetting";
 
 const Contact = props => {
 
     const translateData = useTranslate();
 
     const dbData = useDb();
+
+    const settingData = useSetting();
 
     const handleCopyEmail = () => {
         navigator.clipboard.writeText(dbData.email);
@@ -131,10 +134,15 @@ const Contact = props => {
                     </div>
 
                 </div>
-                <Title title={translateData.sendEmail} />
-                <div className='mt-8'>
-                    <ContactForm />
-                </div>
+                {
+                    settingData.contactForm &&
+                    <React.Fragment>
+                        <Title title={translateData.sendEmail} />
+                        <div className='mt-8'>
+                            <ContactForm />
+                        </div>
+                    </React.Fragment>
+                }
             </main>
         </MainLayout>
     );

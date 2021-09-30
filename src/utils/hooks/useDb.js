@@ -1,7 +1,7 @@
 import useLang from "./useLang";
 import DbData from '../../Data/db.json';
 
-export default () => {
+const useDb = () => {
     const [lang, langContext] = useLang();
 
     let dbData;
@@ -11,3 +11,5 @@ export default () => {
 
     return dbData;
 }
+
+export default useDb;

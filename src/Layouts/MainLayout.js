@@ -6,11 +6,14 @@ import PropTypes, {arrayOf, element} from "prop-types";
 import GoToTop from "../Components/GoToTop"
 import useDb from "../utils/hooks/useDb";
 import BgAnimation from "../Components/BgAnimation";
+import useSetting from "../utils/hooks/useSetting";
 
 
 const MainLayout = props => {
 
     const dbData = useDb();
+
+    const settingData = useSetting();
 
     useEffect(() => {
         window.scrollTo({
@@ -23,7 +26,7 @@ const MainLayout = props => {
         <React.Fragment>
             <div className='w-full block lg:hidden h-20 -mt-20 shadow-2xl sticky -top-20' />
             <ThemeLangButton />
-            <BgAnimation />
+            {settingData.backgroundAnimation && <BgAnimation />}
             <div className='bg-body-light dark:bg-dark pt-36'>
                 <div
                     className='
@@ -46,20 +49,23 @@ const MainLayout = props => {
                             {props.children}
                             <Footer/>
                         </div>
+                        {
+                            settingData.footNote &&
+                            <div
+                                className='
+                                    dark:text-gray-400 dark:shadow-dark-inner dark:bg-dark
+                                    shadow-light-inner bg-light rounded-full text-gray-600
+                                    mx-auto text-center px-6 py-1.5 text-sm ltr:font-en rtl:font-fa
+                                '
+                            >
+                                {dbData.footnote}
+                            </div>
+                        }
 
-                        <div
-                            className='
-                                dark:text-gray-400 dark:shadow-dark-inner dark:bg-dark
-                                shadow-light-inner bg-light rounded-full text-gray-600
-                                mx-auto text-center px-6 py-1.5 text-sm ltr:font-en rtl:font-fa
-                            '
-                        >
-                            {dbData.footnote}
-                        </div>
                     </div>
                 </div>
             </div>
-            <GoToTop />
+            {settingData.goToTopBtn && <GoToTop />}
         </React.Fragment>
     );
 };

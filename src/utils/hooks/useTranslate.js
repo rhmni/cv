@@ -1,7 +1,7 @@
 import TranslateData from "../../Data/translate.json";
 import useLang from "./useLang";
 
-export default () => {
+const useTranslate = () => {
     const [lang, langContext] = useLang();
 
     let translateData;
@@ -11,3 +11,5 @@ export default () => {
 
     return translateData;
 }
+
+export default useTranslate;

@@ -1,4 +1,4 @@
-export default (selectedTag, data) => {
+const useProject = (selectedTag, data) => {
 
     const projects = data.filter(project => project.tag === selectedTag);
 
@@ -6,3 +6,5 @@ export default (selectedTag, data) => {
 
     return [projects, projectLength]
 }
+
+export default useProject;

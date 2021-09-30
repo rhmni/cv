@@ -1,7 +1,12 @@
 import React from 'react';
 import PropTypes from "prop-types";
 
-const SocialLink = ({title, children, link}) => {
+const SocialLink = ({title, children, link, isShow}) => {
+
+    if (!isShow){
+        return <></>
+    }
+
     return (
         <li
             title={title}
@@ -25,6 +30,7 @@ SocialLink.propTypes = {
     title: PropTypes.string.isRequired,
     children: PropTypes.element.isRequired,
     link: PropTypes.string.isRequired,
+    isShow: PropTypes.bool.isRequired,
 };
 
 
