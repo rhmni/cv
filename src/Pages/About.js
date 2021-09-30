@@ -9,6 +9,7 @@ import ProgressBar from "../Components/UI/ProgressBar";
 import useTranslate from "../utils/hooks/useTranslate";
 import useDb from "../utils/hooks/useDb";
 import Title from "../Components/Title";
+import Badge from "../Components/UI/Badge";
 
 const About = props => {
 
@@ -193,16 +194,15 @@ const About = props => {
                                                         </a>
 
                                                 }
-                                                <span
-                                                    className='shadow-light-inner dark:shadow-dark-inner text-red ltr:font-en rtl:font-fa ltr:font-semibold py-1 px-4 rounded-full text-xs text-gray-400'>
-                                                    {education.periodOfTime}
-                                                </span>
+                                                <Badge text={education.periodOfTime}/>
                                             </p>
                                             <p className='flex flex-row items-center text-gray-500 text-sm dark:text-gray-400 w-full'>
                                                 <span className='ltr:mr-2.5 rtl:ml-2.5 text-lg'>
                                                     <AiOutlineCalendar size={22}/>
                                                 </span>
-                                                <span className='ltr:font-en rtl:font-fa'>{education.date}</span>
+                                                <span className='ltr:font-en rtl:font-fa'>
+                                                    {education.date} {education.isNow && <Badge text={translateData.current}/>}
+                                                </span>
                                             </p>
                                             {
                                                 education.descriptions.map((paragraph, index) => (

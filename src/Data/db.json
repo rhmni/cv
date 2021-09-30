@@ -54,8 +54,8 @@
       {
         "title": "مدرک کارشناسی نرم افزار",
         "periodOfTime": "1 سال و ۲ ماه",
-        "date": "مهر 1399 - مهر 1400",
-        "isNow": false,
+        "date": "مهر 1399 - ",
+        "isNow": true,
         "link": "ddd",
         "descriptions": [
           "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.",
@@ -162,7 +162,7 @@
         "title": "Bachelor's degree in software",
         "periodOfTime": "1 year 2 month",
         "date": "sep 2020 - april 2021",
-        "isNow": false,
+        "isNow": true,
         "link": "dd",
         "descriptions": [
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
