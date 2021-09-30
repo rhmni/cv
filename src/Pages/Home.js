@@ -7,7 +7,7 @@ import {
     RiLinkedinLine,
     RiInstagramLine,
     RiGoogleLine,
-    RiTwitterLine,
+    RiTwitterLine, RiSkypeLine,
 } from "react-icons/ri";
 import useTranslate from "../utils/hooks/useTranslate";
 import useDb from "../utils/hooks/useDb";
@@ -57,6 +57,9 @@ const Home = props => {
                     </SocialLink>
                     <SocialLink link={dbData.twitter} title={translateData.socialLinks.twitter}>
                         <RiTwitterLine size={20}/>
+                    </SocialLink>
+                    <SocialLink link={dbData.skype} title={translateData.socialLinks.skype}>
+                        <RiSkypeLine size={23}/>
                     </SocialLink>
                 </ul>
             </main>
