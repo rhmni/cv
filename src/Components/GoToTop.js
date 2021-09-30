@@ -27,4 +27,4 @@ const GoToTop = props => {
     );
 };
 
-export default GoToTop;
+export default React.memo(GoToTop);

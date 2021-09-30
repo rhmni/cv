@@ -1,19 +1,19 @@
 import './App.css';
-import ThemeContextProvider from "./Context/themeContext";
+import ThemeProvider from "./Context/themeContext";
 import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom';
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Projects from "./Pages/Projects";
 import Contact from "./Pages/Contact";
 import {AppRoutes} from "./Routing/AppRoutes";
-import LangContextProvider from "./Context/langContext";
+import LangProvider from "./Context/langContext";
 
 
 const App = () => {
 
     return (
-        <LangContextProvider>
-            <ThemeContextProvider>
+        <LangProvider>
+            <ThemeProvider>
                 <Router>
                     <Switch>
 
@@ -28,8 +28,8 @@ const App = () => {
 
                     </Switch>
                 </Router>
-            </ThemeContextProvider>
-        </LangContextProvider>
+            </ThemeProvider>
+        </LangProvider>
     );
 }
 

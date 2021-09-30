@@ -21,4 +21,4 @@ const BgAnimation = props => {
     );
 };
 
-export default BgAnimation;
+export default React.memo(BgAnimation);

@@ -5,6 +5,7 @@ export default () => {
     const [lang, langContext] = useLang();
 
     let translateData;
+
     if (lang === 'fa') translateData = TranslateData.fa;
     else translateData = TranslateData.en;
 

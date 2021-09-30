@@ -19,4 +19,4 @@ Badge.propTypes = {
     text: PropTypes.string.isRequired,
 }
 
-export default Badge;
+export default React.memo(Badge);

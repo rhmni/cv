@@ -6,7 +6,8 @@ import PropTypes from "prop-types";
 const TextInput = ({isLarge, type, ...props}) => {
     return (
         <div
-            className={`${isLarge ? 'lg:col-span-2' : ''} ltr:font-en rtl:font-fa`}>
+            className={`${isLarge ? 'lg:col-span-2' : ''} ltr:font-en rtl:font-fa`}
+        >
             <Field
                 className={`placeholder resize-none w-full px-4 py-2.5 rounded-xl bg-light shadow-light-outer focus:shadow-light-inner dark:shadow-dark-outer dark:focus:shadow-dark-inner dark:bg-dark`}
                 {...props}
@@ -29,4 +30,4 @@ TextInput.defaultProps = {
     type: 'text',
 }
 
-export default TextInput;
+export default React.memo(TextInput);

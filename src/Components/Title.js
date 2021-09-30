@@ -22,4 +22,4 @@ Title.defaultProps = {
     marginTop: 0,
 }
 
-export default Title;
+export default React.memo(Title);

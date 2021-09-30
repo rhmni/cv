@@ -6,7 +6,9 @@ import useTheme from "../utils/hooks/useTheme";
 
 
 const ThemeLangButton = props => {
+
     const [lang, setLang] = useLang();
+
     const [theme, setTheme] = useTheme();
 
     useEffect(() => {
@@ -49,12 +51,12 @@ const ThemeLangButton = props => {
             <button
                 onClick={handleLang}
                 className='
-                        flex flex-row justify-center items-center
-                        bg-light shadow-light-outer hover:shadow-light-inner
-                        dark:text-gray-100 dark:shadow-dark-outer dark:hover:shadow-dark-inner dark:bg-dark
-                        text-2xl w-14 h-14 rounded-2xl text-gray-700
-                        transition duration-300
-                    '
+                    flex flex-row justify-center items-center
+                    bg-light shadow-light-outer hover:shadow-light-inner
+                    dark:text-gray-100 dark:shadow-dark-outer dark:hover:shadow-dark-inner dark:bg-dark
+                    text-2xl w-14 h-14 rounded-2xl text-gray-700
+                    transition duration-300
+                '
             >
                 <MdTranslate size={27}/>
             </button>
@@ -62,4 +64,4 @@ const ThemeLangButton = props => {
     );
 };
 
-export default ThemeLangButton;
+export default React.memo(ThemeLangButton);

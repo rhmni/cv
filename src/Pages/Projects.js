@@ -12,13 +12,16 @@ import Badge from "../Components/UI/Badge";
 const Projects = props => {
 
     const translateData = useTranslate();
+
     const dbData = useDb();
+
     const [tabTag, setTabTag] = useState(dbData.projectsCategory[0].tag);
+
     const [projects, projectLength] = useProject(tabTag, dbData.projects);
 
     const handleTab = (tag) => {
         setTabTag(tag)
-    }
+    };
 
     return (
         <MainLayout>

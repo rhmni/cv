@@ -17,7 +17,9 @@ import useDb from "../utils/hooks/useDb";
 const Home = props => {
 
     const typedElement = useRef(null);
+
     const dbData = useDb();
+
     const translateData = useTranslate();
 
     useEffect(() => {
@@ -43,24 +45,31 @@ const Home = props => {
                 </h1>
                 <h3 ref={typedElement} className='mt-2 text-lg dark:text-gray-400 text-gray-500 text-center'/>
                 <ul className='flex flex-row flex-wrap justify-center mt-5 gap-2'>
+
                     <SocialLink link={dbData.linkedin} title={translateData.socialLinks.linkedin}>
                         <RiLinkedinLine size={20}/>
                     </SocialLink>
+
                     <SocialLink link={dbData.github} title={translateData.socialLinks.github}>
                         <RiGithubLine size={20}/>
                     </SocialLink>
+
                     <SocialLink link={dbData.instagram} title={translateData.socialLinks.instagram}>
                         <RiInstagramLine size={20}/>
                     </SocialLink>
+
                     <SocialLink link={`mailto:${dbData.email}`} title={translateData.socialLinks.email}>
                         <RiGoogleLine size={20}/>
                     </SocialLink>
+
                     <SocialLink link={dbData.twitter} title={translateData.socialLinks.twitter}>
                         <RiTwitterLine size={20}/>
                     </SocialLink>
+
                     <SocialLink link={dbData.skype} title={translateData.socialLinks.skype}>
                         <RiSkypeLine size={23}/>
                     </SocialLink>
+
                 </ul>
             </main>
         </MainLayout>

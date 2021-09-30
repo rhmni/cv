@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from "prop-types";
 
 const ProgressBar = props => {
-    console.log(props)
     const width = `w-${props.width}%`
 
     return (

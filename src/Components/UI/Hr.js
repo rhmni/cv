@@ -11,14 +11,6 @@ const Hr = ({isCenetr}) => {
 
     if(isCenetr) classes.push('mx-auto', 'justify-center');
 
-    // if (dir === 'center') {
-    //     classes.push('mx-auto', 'justify-center')
-    // } else if (dir === 'rtl') {
-    //     classes.push('ml-auto', 'justify-start')
-    // } else if (dir === 'ltr') {
-    //     classes.push('mr-auto', 'justify-end')
-    // }
-
     return (
         <div className={classes.join(' ')}>
             <div className='bg-red h-1 w-7 rounded-full'/>
@@ -33,6 +25,5 @@ Hr.propTypes = {
 Hr.defaultProps = {
     isCenetr: false,
 };
-
 
 export default Hr;

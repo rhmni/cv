@@ -56,10 +56,9 @@ const ContactForm = props => {
     return (
         <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={onSubmit}>
 
-
             {formik => (
 
-                <Form className='flex flex-col'>
+                <Form className='flex flex-col' noValidate>
                     <fieldset
                         name='inputs'
                         className='grid lg:grid-cols-2 grid-cols-1 gap-y-5 gap-x-8 text-gray-500 dark:text-gray-400'
@@ -91,4 +90,4 @@ const ContactForm = props => {
     );
 };
 
-export default ContactForm;
+export default React.memo(ContactForm);

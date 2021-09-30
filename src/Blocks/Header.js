@@ -1,8 +1,7 @@
-import React from 'react';
+import React, {useEffect, useMemo} from 'react';
 import ProfileImage from "../assets/images/profile.jpg";
 import {RiCameraLine, RiHome2Line, RiPhoneLine, RiUser3Line} from "react-icons/ri";
 import HeaderItem from "../Components/HeaderItem";
-import {withRouter} from "react-router-dom";
 import {AppRoutes} from "../Routing/AppRoutes";
 import useTranslate from "../utils/hooks/useTranslate";
 import useDb from "../utils/hooks/useDb";
@@ -54,4 +53,4 @@ const Header = props => {
     );
 };
 
-export default withRouter(Header);
+export default React.memo(Header);

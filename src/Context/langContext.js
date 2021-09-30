@@ -15,7 +15,7 @@ const langReducer = (state, action) => {
     }
 }
 
-const LangContextProvider = props => {
+const LangProvider = props => {
 
     let initialState = {lang: 'fa'};
 
@@ -29,4 +29,4 @@ const LangContextProvider = props => {
         </LangContext.Provider>
     )
 };
-export default LangContextProvider;
+export default LangProvider;

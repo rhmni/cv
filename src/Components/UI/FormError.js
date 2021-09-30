@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 
 const FormError = props => {
     return (
@@ -7,5 +8,9 @@ const FormError = props => {
         </p>
     );
 };
+
+FormError.propType = {
+    children: PropTypes.string.isRequired,
+}
 
 export default FormError;

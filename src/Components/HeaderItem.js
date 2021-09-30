@@ -1,11 +1,13 @@
 import React from 'react';
-import {withRouter} from "react-router-dom";
+import {useHistory} from "react-router-dom";
 import PropTypes from "prop-types";
 
 const HeaderItem = props => {
 
+    const history = useHistory();
+
     const handleClicked = () => {
-        props.history.push(props.path);
+        history.push(props.path);
     };
 
     let classes = [
@@ -16,7 +18,7 @@ const HeaderItem = props => {
         'transition', 'duration-300',
     ];
 
-    if (props.match.path === props.path) classes.push('shadow-light-inner', 'dark:shadow-dark-inner');
+    if (history.location.pathname === props.path) classes.push('shadow-light-inner', 'dark:shadow-dark-inner');
     else classes.push('shadow-light-outer', 'dark:shadow-dark-outer');
 
     return (
@@ -35,4 +37,4 @@ HeaderItem.propTypes = {
     children: PropTypes.element.isRequired,
 };
 
-export default withRouter(HeaderItem);
+export default React.memo(HeaderItem);

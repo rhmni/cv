@@ -16,7 +16,7 @@ const themeReducer = (state, action) => {
 }
 
 
-const ThemeContextProvider = props => {
+const ThemeProvider = props => {
 
     let initialState = {theme: 'light'};
 
@@ -30,4 +30,4 @@ const ThemeContextProvider = props => {
         </ThemeContext.Provider>
     )
 };
-export default ThemeContextProvider;
+export default ThemeProvider;

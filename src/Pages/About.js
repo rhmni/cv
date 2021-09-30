@@ -1,6 +1,5 @@
 import React from 'react';
 import MainLayout from "../Layouts/MainLayout";
-import Hr from "../Components/UI/Hr";
 import {VscChromeClose} from "react-icons/vsc";
 import {AiOutlineCalendar} from "react-icons/ai";
 import {GiRibbonMedal} from "react-icons/gi";
@@ -14,6 +13,7 @@ import Badge from "../Components/UI/Badge";
 const About = props => {
 
     const dbData = useDb();
+
     const translateData = useTranslate();
 
     return (
@@ -29,7 +29,10 @@ const About = props => {
                 {
                     dbData.bio.map((paragraph, index) => (
                         <p key={index}
-                           className={`${index === 0 ? 'mt-6' : 'mt-2'} text-md dark:text-gray-400 text-gray-500 leading-7 ltr:font-en rtl:font-fa`}>{paragraph}</p>
+                           className={`${index === 0 ? 'mt-6' : 'mt-2'} text-md dark:text-gray-400 text-gray-500 leading-7 ltr:font-en rtl:font-fa`}
+                        >
+                            {paragraph}
+                        </p>
                     ))
                 }
                 <div className='flex flex-col lg:flex-row mt-6 gap-5 lg:mx-2 justify-center'>
@@ -37,22 +40,28 @@ const About = props => {
                         <div className='w-full rounded-2xl shadow-light-outer dark:shadow-dark-outer'>
                             <ul className='p-3'>
                                 <li className='flex flex-col lg:flex-row lg:border-b dark:border-gray-600 justify-between'>
-                                    <span
-                                        className='w-full lg:w-1/3 text-center text-gray-700 py-2.5 pb-0 lg:rtl:border-l lg:ltr:border-r dark:border-gray-600 dark:text-gray-100 ltr:font-en rtl:font-fa font-semibold'>{translateData.charts.name}</span>
-                                    <span
-                                        className='w-full lg:w-2/3 text-center text-gray-500 py-2.5 dark:text-gray-400 ltr:font-en rtl:font-fa'>{dbData.name}</span>
+                                    <span className='w-full lg:w-1/3 text-center text-gray-700 py-2.5 pb-0 lg:rtl:border-l lg:ltr:border-r dark:border-gray-600 dark:text-gray-100 ltr:font-en rtl:font-fa font-semibold'>
+                                        {translateData.charts.name}
+                                    </span>
+                                    <span className='w-full lg:w-2/3 text-center text-gray-500 py-2.5 dark:text-gray-400 ltr:font-en rtl:font-fa'>
+                                        {dbData.name}
+                                    </span>
                                 </li>
                                 <li className='flex flex-col lg:flex-row lg:border-b dark:border-gray-600 justify-between'>
-                                    <span
-                                        className='w-full lg:w-1/3 text-center text-gray-700 py-2.5 pb-0 lg:rtl:border-l lg:ltr:border-r dark:border-gray-600 dark:text-gray-100 ltr:font-en rtl:font-fa font-semibold'>{translateData.charts.age}</span>
-                                    <span
-                                        className='w-full lg:w-2/3 text-center text-gray-500 py-2.5 dark:text-gray-400 font-en'>{dbData.age}</span>
+                                    <span className='w-full lg:w-1/3 text-center text-gray-700 py-2.5 pb-0 lg:rtl:border-l lg:ltr:border-r dark:border-gray-600 dark:text-gray-100 ltr:font-en rtl:font-fa font-semibold'>
+                                        {translateData.charts.age}
+                                    </span>
+                                    <span className='w-full lg:w-2/3 text-center text-gray-500 py-2.5 dark:text-gray-400 font-en'>
+                                        {dbData.age}
+                                    </span>
                                 </li>
                                 <li className='flex flex-col lg:flex-row justify-between'>
-                                    <span
-                                        className='w-full lg:w-1/3 text-center text-gray-700 py-2.5 pb-0 lg:rtl:border-l lg:ltr:border-r dark:border-gray-600 dark:text-gray-100 ltr:font-en rtl:font-fa font-semibold'>{translateData.charts.city}</span>
-                                    <span
-                                        className='w-full lg:w-2/3 text-center text-gray-500 py-2.5 dark:text-gray-400 ltr:font-en rtl:font-fa'>{dbData.city}</span>
+                                    <span className='w-full lg:w-1/3 text-center text-gray-700 py-2.5 pb-0 lg:rtl:border-l lg:ltr:border-r dark:border-gray-600 dark:text-gray-100 ltr:font-en rtl:font-fa font-semibold'>
+                                        {translateData.charts.city}
+                                    </span>
+                                    <span className='w-full lg:w-2/3 text-center text-gray-500 py-2.5 dark:text-gray-400 ltr:font-en rtl:font-fa'>
+                                        {dbData.city}
+                                    </span>
                                 </li>
                             </ul>
                         </div>
@@ -61,26 +70,30 @@ const About = props => {
                         <div className='w-full rounded-2xl shadow-light-outer dark:shadow-dark-outer'>
                             <ul className='p-3'>
                                 <li className='flex flex-col lg:flex-row lg:border-b dark:border-gray-600 justify-between'>
-                                    <span
-                                        className='w-full lg:w-1/3 text-center text-gray-700 py-2.5 pb-0 lg:rtl:border-l lg:ltr:border-r dark:border-gray-600 dark:text-gray-100 ltr:font-en rtl:font-fa font-semibold'>{translateData.charts.email}</span>
-                                    <span
-                                        className='w-full lg:w-2/3 text-center text-gray-500 py-2.5 dark:text-gray-400 font-en'>{dbData.email}</span>
+                                    <span className='w-full lg:w-1/3 text-center text-gray-700 py-2.5 pb-0 lg:rtl:border-l lg:ltr:border-r dark:border-gray-600 dark:text-gray-100 ltr:font-en rtl:font-fa font-semibold'>
+                                        {translateData.charts.email}
+                                    </span>
+                                    <span className='w-full lg:w-2/3 text-center text-gray-500 py-2.5 dark:text-gray-400 font-en'>
+                                        {dbData.email}
+                                    </span>
                                 </li>
                                 <li className='flex flex-col lg:flex-row lg:border-b dark:border-gray-600 justify-between'>
-                                    <span
-                                        className='w-full lg:w-1/3 text-center text-gray-700 py-2.5 pb-0 lg:rtl:border-l lg:ltr:border-r dark:border-gray-600 dark:text-gray-100 ltr:font-en rtl:font-fa font-semibold'>{translateData.charts.phone}</span>
-                                    <span
-                                        className='w-full lg:w-2/3 text-center text-gray-500 py-2.5 dark:text-gray-400 font-en '>{dbData.phone}</span>
+                                    <span className='w-full lg:w-1/3 text-center text-gray-700 py-2.5 pb-0 lg:rtl:border-l lg:ltr:border-r dark:border-gray-600 dark:text-gray-100 ltr:font-en rtl:font-fa font-semibold'>
+                                        {translateData.charts.phone}
+                                    </span>
+                                    <span className='w-full lg:w-2/3 text-center text-gray-500 py-2.5 dark:text-gray-400 font-en '>
+                                        {dbData.phone}
+                                    </span>
                                 </li>
                                 <li className='flex flex-col lg:flex-row justify-between'>
-                                    <span
-                                        className='w-full lg:w-1/3 text-center text-gray-700 py-2.5 pb-0 lg:rtl:border-l lg:ltr:border-r dark:border-gray-600 dark:text-gray-100 ltr:font-en rtl:font-fa font-semibold'>{translateData.charts.remote}</span>
-                                    <span
-                                        className='w-full lg:w-2/3 text-center text-gray-500 py-2.5 dark:text-gray-400 flex flex-row justify-center'
+                                    <span className='w-full lg:w-1/3 text-center text-gray-700 py-2.5 pb-0 lg:rtl:border-l lg:ltr:border-r dark:border-gray-600 dark:text-gray-100 ltr:font-en rtl:font-fa font-semibold'>
+                                        {translateData.charts.remote}
+                                    </span>
+                                    <span className='w-full lg:w-2/3 text-center text-gray-500 py-2.5 dark:text-gray-400 flex flex-row justify-center'
                                     >
                                         {
                                             dbData.isRemote ? <i><FcCheckmark size={25}/></i> :
-                                                <i className='text-red'><VscChromeClose size={25}/></i>
+                                            <i className='text-red'><VscChromeClose size={25}/></i>
                                         }
                                     </span>
                                 </li>
@@ -143,8 +156,7 @@ const About = props => {
                                                         </a>
 
                                                 }
-                                                <span
-                                                    className='shadow-light-inner dark:shadow-dark-inner text-red ltr:font-en rtl:font-fa ltr:font-semibold py-1 px-4 rounded-full text-xs text-gray-400'>
+                                                <span className='shadow-light-inner dark:shadow-dark-inner text-red ltr:font-en rtl:font-fa ltr:font-semibold py-1 px-4 rounded-full text-xs text-gray-400'>
                                                     {experience.periodOfTime}
                                                 </span>
                                             </p>
@@ -156,8 +168,12 @@ const About = props => {
                                             </p>
                                             {
                                                 experience.descriptions.map((paragraph, index) => (
-                                                    <p key={index}
-                                                       className={`${index === 0 ? 'mt-3' : 'mt-2'} text-md dark:text-gray-400 text-gray-500 ltr:font-en rtl:font-fa leading-7`}>{paragraph}</p>
+                                                    <p
+                                                        key={index}
+                                                        className={`${index === 0 ? 'mt-3' : 'mt-2'} text-md dark:text-gray-400 text-gray-500 ltr:font-en rtl:font-fa leading-7`}
+                                                    >
+                                                        {paragraph}
+                                                    </p>
                                                 ))
                                             }
                                         </div>
@@ -169,7 +185,6 @@ const About = props => {
                     </div>
                 </div>
                 <Title title={translateData.education} marginTop={10}/>
-
                 <div className='flex flex-row mt-4'>
                     <div className='w-11/12 mt-5'>
                         <div className='flex gap-10 flex-col w-full'>
@@ -206,8 +221,12 @@ const About = props => {
                                             </p>
                                             {
                                                 education.descriptions.map((paragraph, index) => (
-                                                    <p key={index}
-                                                       className={`${index === 0 ? 'mt-3' : 'mt-2'} text-md dark:text-gray-400 text-gray-500 ltr:font-en rtl:font-fa leading-7`}>{paragraph}</p>
+                                                    <p
+                                                        key={index}
+                                                       className={`${index === 0 ? 'mt-3' : 'mt-2'} text-md dark:text-gray-400 text-gray-500 ltr:font-en rtl:font-fa leading-7`}
+                                                    >
+                                                        {paragraph}
+                                                    </p>
                                                 ))
                                             }
                                         </div>
@@ -226,8 +245,7 @@ const About = props => {
                                 <div className='w-full shadow-light-inner dark:shadow-dark-inner p-2 rounded-2xl'>
                                     <div
                                         className='flex flex-row gap-5 w-full shadow-light-outer dark:shadow-dark-outer rounded-2xl p-5 items-center'>
-                                        <div
-                                            className='flex-shrink-0 w-24 h-24 text-red hidden sm:flex justify-center items-center rounded-full shadow-light-inner dark:shadow-dark-inner'>
+                                        <div className='flex-shrink-0 w-24 h-24 text-red hidden sm:flex justify-center items-center rounded-full shadow-light-inner dark:shadow-dark-inner'>
                                             <GiRibbonMedal size={45}/>
                                         </div>
                                         <div className='flex flex-col'>
