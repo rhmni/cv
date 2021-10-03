@@ -27,6 +27,7 @@ const ProgressBar = props => {
             95:'w-95%',
             100:'w-100%',
         }
+        return widths[widthPercent]
     }
 
     const color = colorName => {
@@ -47,7 +48,7 @@ const ProgressBar = props => {
         <React.Fragment>
             <p className='uppercase dark:text-gray-100 text-gray-700 mb-1.5 cursor-default font-en font-semibold'>{props.name}</p>
             <div className='flex flex-row items-center justify-start mb-5 py-1 px-2 shadow-light-inner dark:shadow-dark-inner rounded-full w-full h-4'>
-                <div className={`${color(props.color)} h-1.5 rounded-full ${width}`} />
+                <div className={`${color(props.color)} h-1.5 rounded-full ${width(props.width)}`} />
             </div>
         </React.Fragment>
     );
