@@ -4,9 +4,12 @@ import {MdTranslate} from "react-icons/md";
 import useLang from "../utils/hooks/useLang";
 import useTheme from "../utils/hooks/useTheme";
 import useSetting from "../utils/hooks/useSetting";
+import useDb from "../utils/hooks/useDb";
 
 
 const ThemeLangButton = props => {
+
+    const dbData = useDb();
 
     const [lang, setLang] = useLang();
 
@@ -15,8 +18,10 @@ const ThemeLangButton = props => {
     const settingData = useSetting();
 
     useEffect(() => {
-        if (theme === 'dark') document.documentElement.classList.add('dark')
-        else document.documentElement.classList.remove('dark')
+        if (theme === 'dark') document.documentElement.classList.add('dark');
+        else document.documentElement.classList.remove('dark');
+
+        document.title = dbData.name;
 
         if (lang === 'fa') {
             document.dir = 'rtl';

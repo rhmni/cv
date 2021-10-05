@@ -28,12 +28,30 @@
         "color": "red",
         "skills": [
           {
-            "name": "react",
-            "percent": 45
+            "name": "javascript",
+            "percent": 40
           },
           {
+            "name": "react",
+            "percent": 50
+          },
+          {
+            "name": "tailwind",
+            "percent": 60
+          }
+        ]
+      },
+      {
+        "name": "Back-End",
+        "color": "green",
+        "skills": [
+          {
             "name": "python",
-            "percent": 55
+            "percent": 70
+          },
+          {
+            "name": "django",
+            "percent": 85
           }
         ]
       }
@@ -67,9 +85,9 @@
     "certificates": [
       {
         "title": "آموزش پایتون از کورسرا",
-        "subtitle": "سریال مدرک : ۲۸۵۴۲۰۱",
-        "link": "",
-        "date": "۲۱ خرداد ۱۴۰۰"
+        "subtitle": "سریال مدرک : 44JCGDSAKRQ8",
+        "link": "https://www.coursera.org/account/accomplishments/verify/44JCGDSAKRQ8",
+        "date": "۱۰ خرداد ۱۴۰۰"
       }
     ],
     "projectsCategory": [
@@ -136,12 +154,30 @@
         "color": "red",
         "skills": [
           {
-            "name": "react",
-            "percent": 45
+            "name": "javascript",
+            "percent": 40
           },
           {
+            "name": "react",
+            "percent": 50
+          },
+          {
+            "name": "tailwind",
+            "percent": 60
+          }
+        ]
+      },
+      {
+        "name": "Back-End",
+        "color": "green",
+        "skills": [
+          {
             "name": "python",
-            "percent": 55
+            "percent": 70
+          },
+          {
+            "name": "django",
+            "percent": 85
           }
         ]
       }
@@ -150,7 +186,7 @@
       {
         "title": "Bachelor's degree in software",
         "periodOfTime": "1 year 2 month",
-        "date": "sep 2020 - april 2021",
+        "date": "Sep 2020 - April 2021",
         "isNow": false,
         "link": "",
         "descriptions": [
@@ -163,7 +199,7 @@
       {
         "title": "Bachelor's degree in software",
         "periodOfTime": "1 year 2 month",
-        "date": "sep 2020 - april 2021",
+        "date": "Sep 2020 - ",
         "isNow": true,
         "link": "dd",
         "descriptions": [
@@ -174,10 +210,10 @@
     ],
     "certificates": [
       {
-        "title": "python crash course",
-        "subtitle": "certificate id : 2854201",
-        "link": "",
-        "date": "31 may 2021"
+        "title": "Python Crash Course",
+        "subtitle": "Certificate id : 44JCGDSAKRQ8",
+        "link": "https://www.coursera.org/account/accomplishments/verify/44JCGDSAKRQ8",
+        "date": "31 May 2021"
       }
     ],
     "projectsCategory": [

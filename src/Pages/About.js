@@ -110,7 +110,7 @@ const About = props => {
                 {
                     settingData.skills &&
                     <div className='flex flex-col'>
-                        <Title title={translateData.skills} marginTop={12} />
+                        <Title title={translateData.skills} marginTop />
                         {
                             dbData.skillContainers.map((skillContainer, index) => (
                                 <div key={index} className='flex flex-col gap-6 lg:gap-0 items-center lg:flex-row mt-8'>
@@ -141,7 +141,7 @@ const About = props => {
                 {
                     settingData.experience &&
                     <React.Fragment>
-                        <Title title={translateData.experience} marginTop={10}/>
+                        <Title title={translateData.experience} marginTop />
                         <div className='flex flex-row mt-4'>
                             <div className='w-11/12 mt-5'>
                                 <div className='flex gap-10 flex-col w-full'>
@@ -199,7 +199,7 @@ const About = props => {
                 {
                     settingData.education &&
                     <React.Fragment>
-                        <Title title={translateData.education} marginTop={10}/>
+                        <Title title={translateData.education} marginTop />
                         <div className='flex flex-row mt-4'>
                             <div className='w-11/12 mt-5'>
                                 <div className='flex gap-10 flex-col w-full'>
@@ -257,7 +257,7 @@ const About = props => {
                 {
                     settingData.certificates &&
                     <React.Fragment>
-                        <Title title={translateData.certificates} marginTop={10}/>
+                        <Title title={translateData.certificates} marginTop/>
                         <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 mt-10'>
                             {
                                 dbData.certificates.map((certificate, index) => (
